@@ -1,0 +1,16 @@
+/* Ajustes exclusivos para el panel local de Tortas. Se reutilizan los estilos del panel de La Carta. */
+.tortas-admin-trigger { margin-top:12px; text-align:center; }
+.tortas-admin-link { font:600 13px/1.45 'DM Sans',Arial,sans-serif; color:#713b29; text-decoration:underline; text-underline-offset:3px; }
+.tortas-admin-link:hover { color:#8e1a34; }
+.tortas-admin-list-row { gap:12px; }
+.tortas-admin-list-image { width:56px; height:55px; border-radius:9px; object-fit:cover; flex-shrink:0; background:#f0e0cc; }
+.tortas-admin-list-info { min-width:0; flex:1; }
+.tortas-admin-list-info strong { overflow-wrap:anywhere; }
+.tortas-admin-photo-box { display:flex; align-items:center; flex-wrap:wrap; gap:16px; padding:14px; border:1px dashed #c8a37b; background:#fff9f1; border-radius:12px; }
+.tortas-admin-preview { width:140px; height:105px; border-radius:11px; object-fit:cover; border:1px solid #e5cdb3; }
+.tortas-admin-photo-box .ginger-admin-field { flex:1; min-width:190px; margin:0; }
+.tortas-admin-photo-hint { margin:5px 0 0; font-size:12px; color:#725a4a; }
+.tortas-admin-empty { grid-column:1/-1; text-align:center; padding:40px 12px; color:#654e3b; }
+#tortas-admin-overlay .ginger-admin-card { max-width:860px; }
+#tortas-admin-overlay .ginger-admin-field [type=file] { padding:8px; background:#fff; max-width:100%; }
+@media(max-width:520px) { .tortas-admin-photo-box { flex-direction:column; align-items:stretch; } .tortas-admin-preview { max-width:100%; } .tortas-admin-list-image { width:45px; height:48px; } }

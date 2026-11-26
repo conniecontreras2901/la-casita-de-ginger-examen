@@ -1,0 +1,259 @@
+/* AUTORA: DANIELA GONZÁLEZ — PORTADA E INICIO */
+.hero-home{background:radial-gradient(ellipse at 78% 40%,#b98a58 0%,#efd9bb 32%,#fff9ed 68%);position:relative;overflow:hidden}.hero-home:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 81% 24%,#fff9a9ad 0 4px,transparent 7px),radial-gradient(circle at 90% 40%,#ffe2a1bf 0 6px,transparent 10px),radial-gradient(circle at 60% 16%,#fff6c5 0 5px,transparent 9px);pointer-events:none}.hero-home-grid{display:grid;grid-template-columns:48% 52%;min-height:470px;align-items:center;position:relative}.hero-copy{position:relative;z-index:2;padding:40px 0 50px}.hero-copy h1{font-size:clamp(3rem,5.5vw,5.4rem);color:var(--pino);letter-spacing:-.035em}.hero-copy h1 span{color:var(--vino);font-style:italic}.hero-lead{max-width:380px;font:italic 1.1rem/1.45 'Playfair Display',serif}.hero-art{height:470px;position:relative}.hero-cake{position:absolute;width:84%;right:-8%;bottom:0;height:82%;object-fit:cover;object-position:center;border-radius:45% 0 0 34%;box-shadow:var(--sombra)}.hero-ginger{position:absolute;z-index:2;left:-4%;bottom:-9%;width:52%;filter:drop-shadow(6px 10px 14px #52371966)}.ginger-intro-paper{background:radial-gradient(ellipse at center,#fffdfa 10%,#f5e6d2 100%);padding:48px 0;position:relative;overflow:hidden}.ginger-intro-grid{display:grid;grid-template-columns:22% 25% 53%;align-items:center;gap:0}.ginger-intro-figure{margin-left:-30px}.ginger-intro-character{width:112%;max-width:none}.ginger-intro-text{padding:12px}.ginger-intro-text h2{color:var(--pino);margin-bottom:14px}.ginger-intro-text h2 span{color:var(--vino)}.ginger-intro-text p{font-size:.94rem}.polaroid-row{display:flex;gap:12px;justify-content:center;padding:18px 10px}.polaroid{background:#fff;padding:9px 9px 13px;box-shadow:0 7px 12px #674a3155;width:31%;margin:0;transform:rotate(-6deg)}.polaroid:nth-child(2){transform:rotate(4deg)}.polaroid:nth-child(3){transform:rotate(-3deg)}.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover}.polaroid figcaption{font:italic .74rem Georgia,serif;text-align:center;padding-top:8px}.about-section{padding:72px 0;background:linear-gradient(#fff7eb,#f7ecdd)}.about-grid{display:grid;grid-template-columns:1.1fr .74fr 1fr;gap:32px;align-items:center}.about-photo img{border-radius:25px;aspect-ratio:1.12;object-fit:cover}.about-copy h2{color:var(--pino)}.about-copy h2 em{color:var(--vino)}.about-copy p{font-size:.93rem}.about-values{border-left:2px solid #b98a5c;padding-left:28px}.about-values article{margin-bottom:19px}.about-values h3{color:var(--vino);margin-bottom:4px}.about-values p{font-size:.85rem;line-height:1.5}.testimonials-section{padding:44px 0;background:#f7e8d3}.centered{text-align:center;max-width:720px}.centered h2{font-size:2rem;color:var(--vino)}.visit-section{background:#fff8ed;padding:65px 0}.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}.visit-grid h2{color:var(--pino)}.visit-grid h2 em{color:var(--vino)}.visit-grid iframe{width:100%;height:300px;border:0;border-radius:20px;box-shadow:var(--sombra)}
+@media(max-width:980px){.hero-home-grid{grid-template-columns:1fr 1fr}.ginger-intro-grid{grid-template-columns:30% 70%}.polaroid-row{grid-column:1/-1}.about-grid{grid-template-columns:1fr 1fr}.about-values{grid-column:1/-1;border-left:none;border-top:2px solid #b98a5c;padding:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:650px){.hero-home-grid{display:flex;flex-direction:column;align-items:stretch}.hero-copy{padding:44px 0 10px}.hero-copy h1{font-size:3.4rem}.hero-art{height:290px}.hero-cake{height:86%;width:80%;right:0}.hero-ginger{width:44%;left:1%;bottom:-3%}.ginger-intro-grid{grid-template-columns:34% 66%}.ginger-intro-figure{margin-left:-10px}.ginger-intro-text h2{font-size:2.5rem}.ginger-intro-text p{font-size:.84rem}.polaroid-row{padding:22px 0}.polaroid figcaption{font-size:.6rem}.about-grid{grid-template-columns:1fr}.about-values{grid-template-columns:1fr}.visit-grid{grid-template-columns:1fr}}
+
+/* Ajustes del encabezado y de las fotografías. */
+.hero-home .hero-ginger{width:min(70%,570px);left:-3%;bottom:-7%;object-fit:contain;max-height:96%}
+.hero-home .hero-cake{opacity:.27;right:-5%;width:64%;height:78%;object-fit:cover}
+.about-section{padding:58px 0 68px}.about-grid{grid-template-columns:minmax(260px,1.15fr) minmax(225px,.85fr) minmax(225px,1fr)}
+.about-photo img.full-image{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;max-height:none;border-radius:22px}
+.local-gallery{grid-column:1/-1;display:flex;justify-content:center;align-items:center;margin-top:12px}.local-gallery-item{margin:0;width:min(100%,780px);text-align:center}.local-gallery-item img{width:100%;height:auto;object-fit:contain;max-height:720px;border-radius:21px}.local-gallery-item figcaption{font:italic 1rem Georgia,serif;color:var(--vino);margin-top:8px}
+@media(max-width:650px){.hero-home .hero-ginger{width:70%;left:0;bottom:-6%;max-height:100%}.hero-home .hero-cake{width:75%;opacity:.18}.about-grid{grid-template-columns:1fr}}
+
+/* Encabezado: Ginger con pastel de corazón, grande y fundido con el fondo. */
+.hero-home{background:linear-gradient(95deg,#fff9ed 12%,#fff5e7 49%,#f1d7b7 100%)}
+.hero-home-grid{grid-template-columns:48% 52%;min-height:465px}
+.hero-copy{z-index:2;padding:45px 0}
+.hero-art{height:465px;align-self:stretch;overflow:visible}
+.hero-home .hero-ginger{left:-12%;bottom:0;width:116%;height:100%;max-height:none;object-fit:cover;object-position:60% center;filter:none;opacity:1;mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.83) 18%,black 38%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.83) 18%,black 38%)}
+.hero-home .hero-cake{display:none}
+.ginger-intro-paper{background:linear-gradient(100deg,#fff5e8,#fff9f2 52%,#f5e8da)}
+@media(max-width:700px){.hero-home-grid{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:36px 0 12px}.hero-art{height:320px;width:100%}.hero-home .hero-ginger{width:100%;height:100%;left:0;bottom:0;object-fit:cover;object-position:center;mask-image:linear-gradient(0deg,black 60%,transparent 100%);-webkit-mask-image:linear-gradient(0deg,black 60%,transparent 100%)}}
+
+
+/* ======================================================
+   EVALUACIÓN 3 · DANIELA GONZÁLEZ
+   Reglas del Inicio movidas desde ajustes-daniela.css
+   (bloques 3, 4, 5, 7, 9, 13, 15, 28, 29, 30 y 33).
+   Van al final para mantener el mismo orden que tenían.
+   ====================================================== */
+.hero-lead,.polaroid figcaption,.local-gallery-item figcaption{font-family:var(--serif)}
+.hero-home{position:relative;display:flex;align-items:center;min-height:540px;overflow:hidden}
+.hero-home .hero-home-grid{position:static;display:block;min-height:0}
+.hero-home .hero-copy{position:relative;z-index:2;max-width:min(520px,47%);padding:64px 0 60px}
+.hero-home .hero-art{position:absolute;top:0;right:0;bottom:0;width:56%;height:auto}
+.hero-home .hero-art .hero-ginger{
+  position:absolute;top:0;right:0;bottom:0;left:auto;
+  width:56%;height:100%;min-height:0;max-width:none;max-height:none;
+  object-fit:cover;object-position:center 35%;opacity:1;filter:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 30%);
+}
+.hero-home .hero-art .hero-ginger{width:100%;object-position:center top}
+.hero-home .hero-copy h1{margin-bottom:20px}
+.hero-home .hero-lead{max-width:420px;font-size:1.2rem;margin-bottom:18px}
+#bienvenida .ginger-welcome-copy{max-width:470px;padding-right:0;font-size:.98rem;line-height:1.75}
+#bienvenida .ginger-welcome-copy p{margin-bottom:12px}
+#bienvenida .btn{margin-top:10px}
+#ginger-presentacion .ginger-intro-text{max-width:620px}
+#ginger-presentacion .ginger-intro-text h2{margin-bottom:22px}
+#ginger-presentacion .ginger-intro-text p{font-size:1.02rem;line-height:1.85;max-width:58ch;margin-bottom:14px;color:var(--cafe)}
+#ginger-presentacion .ginger-intro-text p:first-of-type{font:italic 500 1.45rem/1.45 var(--serif);color:var(--vino);margin-bottom:18px}
+#ginger-presentacion .ginger-intro-text p:last-of-type{margin:22px 0 26px;padding-left:18px;border-left:3px solid var(--caramelo)}
+#ginger-presentacion .ginger-intro-text p:last-of-type strong{font:italic 600 1.2rem/1.5 var(--serif);color:var(--pino)}
+#nosotros .about-grid{
+  grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr);
+  grid-template-areas:"local texto carro" "valores valores valores";
+  gap:40px 48px;align-items:center;
+}
+#nosotros .about-photo{grid-area:local}
+#nosotros .about-copy{grid-area:texto}
+#nosotros .local-gallery{grid-area:carro;display:block;margin:0}
+#nosotros .local-gallery-item{position:relative;width:100%}
+#nosotros .about-photo img.full-image,#nosotros .local-gallery-item img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;max-height:none;border-radius:26px;box-shadow:var(--sombra)}
+#nosotros .local-gallery-item figcaption{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);margin:0;white-space:nowrap;padding:6px 16px;border-radius:999px;background:#fff9efe6;font-size:.9rem}
+#nosotros .about-copy h2{margin-bottom:18px}
+#nosotros .about-copy p{font-size:.98rem;line-height:1.8;margin-bottom:12px}
+#nosotros .about-values{
+  grid-area:valores;position:relative;isolation:isolate;overflow:visible;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,230px) minmax(0,1fr);align-items:stretch;gap:28px;
+  margin-top:56px;padding:72px 0;border:0;border-radius:0;
+  background:none;
+}
+#nosotros .about-values article{
+  margin:0;padding:40px 38px;border-radius:24px;
+  background:rgba(255,249,239,.08);border:1px solid rgba(255,220,190,.35);box-shadow:none;color:#fff7ec;
+}
+#nosotros .about-values h3{color:var(--dorado);font-size:clamp(1.9rem,3vw,2.5rem);margin-bottom:16px}
+#nosotros .about-values p{color:#fff7ec;font-size:1.1rem;line-height:1.85}
+#nosotros .mv-ginger{align-self:center;width:100%;height:auto;filter:drop-shadow(0 18px 18px #3d050c66)}
+#nosotros{padding-bottom:0}
+.carta-teaser{position:relative;overflow:hidden;display:flex;align-items:center;min-height:420px;padding:0;background:linear-gradient(100deg,#f2d9b9,#fff3e3 50%,var(--papel) 90%)}
+.carta-teaser-inner{display:flex;justify-content:flex-end;position:static}
+.carta-teaser img{position:absolute;top:0;left:0;bottom:0;width:52%;height:100%;max-width:none;object-fit:cover;object-position:center 30%;border-radius:0;box-shadow:none;
+  -webkit-mask-image:linear-gradient(270deg,transparent 0,#000 32%);mask-image:linear-gradient(270deg,transparent 0,#000 32%)}
+.carta-teaser-inner>div{position:relative;z-index:2;max-width:min(500px,46%);padding:60px 0}
+.carta-teaser h2{color:var(--pino);margin-bottom:12px}
+.carta-teaser h2 em{color:var(--vino)}
+.carta-teaser p{max-width:44ch;font-size:1.05rem;margin-bottom:24px}
+.visit-section{position:relative}
+.visit-invite{font:italic 500 1.45rem/1.5 var(--serif);color:var(--cafe);max-width:32ch;margin-bottom:12px}
+.visit-invite-soft{font-size:1.02rem;max-width:44ch;margin-bottom:26px}
+@media(max-width:980px){
+  #nosotros .about-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"local carro" "texto texto" "valores valores"}
+}
+@media(max-width:760px){
+  .hero-home{display:block;min-height:0}
+.hero-home .hero-copy{max-width:none;padding:56px 0 18px}
+.hero-home .hero-art{position:relative;width:auto;height:300px;margin-inline:-32px}
+.hero-home .hero-art .hero-ginger{
+    position:relative;display:block;width:calc(100% + 64px);height:300px;margin-inline:-32px;
+    -webkit-mask-image:linear-gradient(0deg,#000 70%,transparent);mask-image:linear-gradient(0deg,#000 70%,transparent)}
+.hero-home .hero-art .hero-ginger{position:absolute;inset:0;width:100%;margin:0}
+#nosotros .about-values{grid-template-columns:1fr;padding:44px 0}
+.mv-ginger{max-width:170px;margin:0 auto}
+.carta-teaser{display:block;min-height:0}
+.carta-teaser img{position:relative;width:100%;height:280px;-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 30%);mask-image:linear-gradient(0deg,transparent 0,#000 30%)}
+.carta-teaser-inner{display:block}
+.carta-teaser-inner>div{max-width:none;padding:10px 0 50px}
+}
+@media(max-width:580px){
+  .hero-home .hero-art{margin-inline:-15px}
+.hero-home .hero-art .hero-ginger{margin:0}
+#nosotros .about-grid{grid-template-columns:1fr;grid-template-areas:"local" "texto" "carro" "valores"}
+}
+#nosotros .about-values{grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);grid-template-rows:auto auto;gap:24px 56px;align-items:stretch}
+#nosotros .about-values .mv-ginger{grid-column:1;grid-row:1/3;align-self:center;max-width:400px;margin-inline:auto}
+#nosotros .about-values article{grid-column:2}
+#nosotros .about-values article:first-of-type{grid-row:1}
+#nosotros .about-values article:last-of-type{grid-row:2}
+@media(max-width:760px){
+  #nosotros .about-values{grid-template-columns:1fr;grid-template-rows:none}
+#nosotros .about-values .mv-ginger,#nosotros .about-values article,#nosotros .about-values article:first-of-type,#nosotros .about-values article:last-of-type{grid-column:1;grid-row:auto}
+#nosotros .about-values .mv-ginger{max-width:200px;order:-1}
+}
+#nosotros{overflow-x:clip}
+#nosotros .about-values::after{
+  content:"";position:absolute;z-index:-1;top:0;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);
+  background:var(--vino);
+}
+#nosotros .about-values{grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);grid-template-rows:auto auto;gap:24px 56px;align-items:stretch}
+#nosotros .about-values .mv-ginger{grid-column:1;grid-row:1/3;align-self:center;max-width:400px;margin-inline:auto}
+#nosotros .about-values article{grid-column:2}
+#nosotros .about-values article:first-of-type{grid-row:1}
+#nosotros .about-values article:last-of-type{grid-row:2}
+@media(max-width:760px){
+  #nosotros .about-values{grid-template-columns:1fr;padding:56px 0}
+#nosotros .about-values .mv-ginger{grid-column:1;grid-row:auto;max-width:200px}
+#nosotros .about-values article{grid-column:1;grid-row:auto!important}
+}
+#nosotros .local-gallery-item figcaption{display:none}
+.carta-teaser{margin-bottom:200px}
+@media(max-width:760px){
+  .carta-teaser{margin-bottom:150px}
+}
+#nosotros .about-photo img.full-image,#nosotros .local-gallery-item img{border:10px solid #fff;border-radius:8px;box-shadow:0 18px 34px -16px #4f2c1766}
+#nosotros .about-photo{transform:rotate(-2.5deg)}
+#nosotros .local-gallery{transform:rotate(2.5deg)}
+#nosotros .about-copy{text-align:center}
+#nosotros .about-copy .eyebrow{margin-bottom:4px}
+#nosotros .about-copy p:not(.eyebrow){text-align:left}
+#nosotros .about-copy p:nth-of-type(2){font:italic 500 1.2rem/1.55 var(--serif);color:var(--vino);text-align:center}
+.about-ginger{width:min(260px,70%);height:auto;margin:0 auto 6px;filter:drop-shadow(0 10px 10px #4f2c1733)}
+#nosotros .about-values::after{background:radial-gradient(circle at 20% 45%,#a32330 0,transparent 42%),linear-gradient(135deg,var(--vino),var(--vino-dark))}
+#nosotros .about-values{padding:96px 0;gap:26px 64px}
+#nosotros .about-values article{background:#fff8ee;border:0;border-top:4px solid var(--dorado);border-radius:22px;padding:36px 40px;color:var(--cafe);box-shadow:0 24px 44px -24px #2a050ab3}
+#nosotros .about-values article:last-of-type{margin-left:48px}
+#nosotros .about-values h3{color:var(--vino);font-size:clamp(1.9rem,2.8vw,2.4rem);margin-bottom:12px}
+#nosotros .about-values h3::before{content:"NUESTRA";display:block;margin-bottom:4px;font:700 .72rem/1 var(--sans);letter-spacing:.24em;color:var(--caramelo)}
+#nosotros .about-values p{color:var(--cafe);font-size:1.06rem;line-height:1.8}
+#nosotros .mv-ginger{max-width:430px;filter:drop-shadow(0 26px 22px #2a050a80)}
+@media(max-width:760px){
+  #nosotros .about-values article:last-of-type{margin-left:0}
+#nosotros .about-photo,#nosotros .local-gallery{transform:none}
+}
+.polaroid,#nosotros .about-photo,#nosotros .local-gallery-item{position:relative;overflow:visible}
+.polaroid::before,#nosotros .about-photo::before,#nosotros .local-gallery-item::before{
+  content:"";position:absolute;top:-18px;left:50%;z-index:3;width:120px;height:34px;
+  background:url('../img/optimizado/cinta-adhesiva.webp') center/100% 100% no-repeat;
+  transform:translateX(-50%) rotate(-4deg);filter:drop-shadow(0 2px 2px #4f2c1726);pointer-events:none}
+.polaroid:nth-child(even)::before{transform:translateX(-50%) rotate(3deg)}
+#nosotros .local-gallery-item::before{transform:translateX(-50%) rotate(4deg)}
+.visit-map{position:relative;padding-top:186px}
+.map-ginger{position:absolute;top:0;right:48px;width:120px;height:auto;z-index:2;filter:drop-shadow(0 6px 6px #4f2c1740)}
+.visit-map iframe{position:relative;z-index:1}
+
+/* ======================================================
+   EVALUACIÓN 3 · DANIELA GONZÁLEZ
+   MIGRACIÓN DEL INICIO A LA GRILLA DEL TEMPLATE
+   Las secciones del Inicio usan ahora la estructura de Bootstrap 4
+   del template: .row, columnas .col-lg-* / .col-12 e .img-fluid.
+   El template reparte las columnas en porcentajes fijos; para que
+   el diseño de la Ev. 2 se mantenga igual, aquí se deja que nuestra
+   distribución (grid y flex de cada sección) decida el tamaño final.
+   Se escribe con :where() para que cualquier regla nuestra mande.
+   ====================================================== */
+:where(#bienvenida, #ginger-presentacion, #carta, #nosotros, #visitanos) :where(.row){margin-left:auto;margin-right:auto}
+:where(#bienvenida, #ginger-presentacion, #carta, #nosotros, #visitanos) :where(.row > [class*="col-"]){flex:none;max-width:none;width:auto;padding-left:0;padding-right:0;min-height:0}
+
+/* ======================================================
+   INTEGRACIÓN (Daniela González) · Misión y Visión más estética
+   - Fondo vino con luces suaves y puntitos de nieve (igual que "Su misión").
+   - Encabezado: etiqueta dorada, "Visión" en cursiva dorada y línea corta.
+   - Ícono en cada tarjeta, comilla de fondo y leve elevación al pasar el mouse.
+   ====================================================== */
+#nosotros .about-values::after{
+  background:
+    radial-gradient(circle at 12% 18%,#ffffff14 0 1.5px,transparent 2.5px) 0 0/46px 46px,
+    radial-gradient(circle at 80% 70%,#ffffff10 0 1.5px,transparent 2.5px) 0 0/64px 64px,
+    radial-gradient(ellipse at 22% 50%,#b3263a 0%,transparent 55%),
+    radial-gradient(ellipse at 90% 10%,#f6d9a81f 0%,transparent 45%),
+    var(--vino);
+}
+#nosotros .about-values .mv-head{grid-column:2;grid-row:1;align-self:end}
+#nosotros .about-values .mv-ginger{grid-row:1/4}
+#nosotros .about-values article:first-of-type{grid-row:2}
+#nosotros .about-values article:last-of-type{grid-row:3}
+#nosotros .mv-head h2{margin:0;color:#fff8ee;font-size:clamp(2.2rem,4vw,3.4rem)}
+#nosotros .mv-head h2 em{color:#f6d9a8;font-style:italic}
+#nosotros .mv-head h2::after{content:"";display:block;width:72px;height:3px;margin-top:16px;border-radius:3px;background:#f6d9a8}
+#nosotros .about-values article{position:relative;overflow:hidden;border-top:0;transition:transform .25s ease,box-shadow .25s ease}
+#nosotros .about-values article::after{content:"\201D";position:absolute;right:22px;bottom:-34px;font:italic 700 9rem/1 var(--serif);color:var(--vino);opacity:.07;pointer-events:none}
+#nosotros .about-values article:hover{transform:translateY(-4px);box-shadow:0 30px 48px -24px #2a050acc}
+#nosotros .about-values .mv-icon{float:left;display:grid;place-items:center;width:52px;height:52px;margin:2px 18px 6px 0;border-radius:50%;background:var(--vino);color:#f6d9a8;font-size:1.35rem;box-shadow:0 0 0 6px #8c172314}
+#nosotros .about-values h3::before{color:var(--caramelo)}
+@media(max-width:760px){
+  #nosotros .about-values .mv-head{grid-column:1;grid-row:auto;text-align:center}
+  #nosotros .mv-head h2::after{margin-inline:auto}
+  #nosotros .about-values .mv-ginger{grid-row:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  #nosotros .about-values article{transition:none}
+}
+#nosotros .about-values .mv-head .section-kicker{margin:0 0 10px;font-size:.74rem;line-height:1;color:#f6d9a8}
+/* Integración (Daniela González): nuevo orden de Misión y Visión.
+   Título centrado arriba y, debajo, Misión · Ginger al medio · Visión,
+   con las dos tarjetas del mismo alto. */
+#nosotros .about-values{grid-template-columns:minmax(0,1fr) minmax(180px,280px) minmax(0,1fr);grid-template-rows:auto auto;gap:40px 36px;align-items:stretch}
+#nosotros .about-values .mv-head{grid-column:1/-1;grid-row:1;text-align:center;align-self:auto}
+#nosotros .mv-head h2::after{margin-inline:auto}
+#nosotros .about-values article:first-of-type{grid-column:1;grid-row:2}
+#nosotros .about-values .mv-ginger{grid-column:2;grid-row:2;align-self:center;max-width:280px}
+#nosotros .about-values article:last-of-type{grid-column:3;grid-row:2;margin-left:0}
+#nosotros .about-values article{padding:34px 32px}
+@media(max-width:980px){
+  #nosotros .about-values{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;gap:28px}
+  #nosotros .about-values .mv-ginger{grid-column:1/-1;grid-row:2;max-width:200px;margin-inline:auto}
+  #nosotros .about-values article:first-of-type{grid-column:1;grid-row:3}
+  #nosotros .about-values article:last-of-type{grid-column:2;grid-row:3}
+}
+@media(max-width:760px){
+  #nosotros .about-values{grid-template-columns:1fr}
+  #nosotros .about-values .mv-head,#nosotros .about-values .mv-ginger,#nosotros .about-values article:first-of-type,#nosotros .about-values article:last-of-type{grid-column:1;grid-row:auto}
+  #nosotros .about-values .mv-ginger{order:0;max-width:180px}
+  #nosotros .about-values article{padding:28px 24px}
+}
+/* Integración (Daniela González): sin la imagen de Ginger, Misión y Visión quedan una al lado de la otra. */
+#nosotros .about-values{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 32px}
+#nosotros .about-values article:first-of-type{grid-column:1;grid-row:2}
+#nosotros .about-values article:last-of-type{grid-column:2;grid-row:2}
+@media(max-width:980px){
+  #nosotros .about-values article:first-of-type,#nosotros .about-values article:last-of-type{grid-row:2}
+}
+@media(max-width:760px){
+  #nosotros .about-values{grid-template-columns:1fr}
+  #nosotros .about-values article:first-of-type,#nosotros .about-values article:last-of-type{grid-column:1;grid-row:auto}
+}
+/* Integración (Daniela González): sin Ginger sentado, el mapa ya no necesita el espacio de arriba. */
+.visit-map{padding-top:0}

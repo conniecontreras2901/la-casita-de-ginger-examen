@@ -1,0 +1,169 @@
+/* =====================================================================
+   footer.css · AUTORA: CONSTANZA CONTRERAS
+   Pie de página adaptado del footer de classic-onepage-restaurant.html.
+   Integración (Daniela González): estas reglas estaban en pedido.css y
+   se movieron aquí sin cambios para usar el mismo pie en las 4 páginas.
+   Se carga justo antes de ajustes-daniela.css, igual que en pedido.html.
+   ===================================================================== */
+
+/* FOOTER ADAPTADO DEL TEMPLATE */
+
+.footer-ginger {
+    padding: 45px 0 20px;
+    color: var(--cafe);
+    background: #fdf3e8;
+    border-top: 1px solid #e9d5c2;
+}
+
+.footer-ginger .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.footer-ginger .footer-col {
+    min-width: 0;
+    margin-bottom: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.footer-ginger .footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    color: var(--vino);
+    text-decoration: none;
+}
+
+.footer-ginger .footer-logo {
+    width: 74px;
+    height: 74px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.footer-ginger .footer-brand span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.5rem;
+    line-height: 1.1;
+}
+
+.footer-ginger .footer-heading {
+    margin: 0 0 16px;
+    color: var(--vino);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.footer-ginger address,
+.footer-ginger p,
+.footer-ginger li,
+.footer-ginger a {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-ginger address {
+    margin-bottom: 12px;
+    font-style: normal;
+}
+
+.footer-ginger .footer-horarios,
+.footer-ginger .footer-contactos {
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-ginger .footer-horarios li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 16px;
+    padding: 10px 0;
+    color: var(--cafe);
+    border-bottom: 1px solid #dfc7ac;
+}
+
+.footer-ginger .opening-time .day,
+.footer-ginger .opening-time .time {
+    padding: 0;
+    color: var(--cafe);
+    background: transparent;
+}
+
+.footer-ginger .footer-contactos li {
+    margin-bottom: 10px;
+}
+
+.footer-ginger a {
+    color: var(--cafe);
+    overflow-wrap: anywhere;
+}
+
+.footer-ginger a:hover {
+    color: var(--vino);
+}
+
+.footer-ginger a:focus-visible {
+    outline: 2px solid var(--vino);
+    outline-offset: 4px;
+}
+
+.footer-ginger .footer-bottom {
+    margin-top: 8px;
+    padding-top: 16px;
+    color: var(--gris);
+    border-top: 1px solid #ead9c7;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+/* FOOTER EN CELULAR */
+
+@media (max-width: 767px) {
+    .footer-ginger .footer-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* FOOTER EN TABLET */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .footer-ginger .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .footer-ginger .col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* FOOTER EN COMPUTADOR */
+
+@media (min-width: 992px) {
+    .footer-ginger .col-lg-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+/* INTEGRACIÓN (Daniela González): el pie mantiene su color y se separa del contenido
+   con una línea dorada arriba y una sombra suave hacia la sección anterior. */
+.footer-ginger.site-footer{
+    border-top:0;
+    box-shadow:0 -14px 30px -18px rgba(74,40,20,.35);
+}
+.footer-ginger.site-footer::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;z-index:1;
+    background:linear-gradient(90deg,transparent,#d4a85a 15%,#f0d08c 50%,#d4a85a 85%,transparent);
+}

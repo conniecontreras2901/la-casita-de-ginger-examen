@@ -1,0 +1,49 @@
+/* =====================================================================
+   template.css · AUTORA: DANIELA GONZÁLEZ
+   Conecta el template Assan (Bootstrap 4) al sitio SIN cambiar el
+   diseño de la Evaluación 2.
+
+   CÓMO FUNCIONA
+   1. Los estilos del template se importan dentro de una "capa"
+      (@layer template). Nuestros estilos (base.css, inicio.css, etc.)
+      no están en ninguna capa, por eso siempre ganan sobre el template.
+   2. Algunas cosas que nosotros nunca definimos (por ejemplo el grosor
+      de los títulos) el template sí las cambia. En la parte
+      "VALORES ORIGINALES" se dejan como estaban en la Ev. 2.
+      Se escriben con :where() para que cualquier regla nuestra
+      pueda cambiarlas sin problemas.
+   3. El template usa !important en el relleno de los botones; la capa
+      "correcciones" (que va antes que la del template) lo devuelve a
+      nuestros valores.
+
+   Así el template queda disponible para cada compañero (grilla,
+   navbar, pestañas, carruseles, galería, back-to-top) y el sitio se ve
+   igual que antes. Los archivos del template NO se editan.
+   ===================================================================== */
+
+@layer correcciones, template;
+@import url("plugins/plugins.css") layer(template);
+@import url("style-restaurant.css") layer(template);
+
+/* 3. Relleno de botones (el template lo fuerza con !important) */
+@layer correcciones {
+    .btn { padding: 12px 27px !important; }
+    .btn-small { padding: 10px 17px !important; }
+    .pedido-form-panel .btn-submit { padding: 14px 18px !important; } /* botón del formulario de Constanza */
+}
+
+/* 2. VALORES ORIGINALES (lo que el template cambia y nosotros no habíamos definido) */
+:where(body) { letter-spacing: normal; -webkit-font-smoothing: auto; -moz-osx-font-smoothing: auto; }
+:where(a) { text-decoration: underline; }
+:where(a:hover, a:focus) { color: inherit; text-decoration: underline; }
+:where(.container) { max-width: none; padding-left: 0; padding-right: 0; }
+:where(h1, h2, h3, h4, h5, h6) { font-weight: 700; letter-spacing: normal; color: inherit; text-transform: none; }
+:where(h1) { margin-bottom: .67em; }
+:where(h2) { margin-bottom: .83em; }
+:where(h3) { margin-bottom: 1em; }
+:where(h4) { margin-bottom: 1.33em; }
+:where(p) { color: inherit; margin-bottom: 1em; }
+:where(label) { margin-bottom: 0; }
+:where(input[type="checkbox"]) { margin: 3px 3px 3px 4px; }
+:where(input[type="radio"]) { margin: 3px 3px 0 5px; }
+:where(.btn) { font-size: 1rem; font-family: inherit; letter-spacing: normal; text-transform: none; overflow: visible; position: static; z-index: auto; }

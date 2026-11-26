@@ -1,0 +1,136 @@
+/* Cuento completo: ajustes puntuales sobre el libro original de Evaluación 2. */
+/* Las hojas, giros, apertura y navegación siguen definidos en ginger.css (antes en ajustes-daniela.css). */
+.page-ginger .flipbook .flip-leaf.leaf-13{--k:13}
+.page-ginger .flipbook .flip-leaf.leaf-14{--k:14}
+/* En la EV2 la hoja12 era la última; ahora el final llega en la hoja13. */
+.flipbook:has(#hoja-12:checked) .flip-stage{transform:none}
+#hoja-13:checked ~ .flip-stage .leaf-13{transform:rotateY(-180deg);z-index:calc(50 + var(--k))}
+#hoja-13:focus-visible ~ .flip-stage .leaf-13 .story-arrow{outline:3px solid var(--pino);outline-offset:3px}
+.page-ginger .page-text .story-paragraph{font:italic 1.02rem/1.65 var(--serif);color:var(--cafe);max-width:100%;overflow-wrap:break-word}
+.page-ginger .page-text.story-full-text{padding:40px 38px 88px}
+.page-ginger .page-text.story-full-text .story-number{margin-bottom:9px}
+.page-ginger .page-text.story-full-text h3{font-size:clamp(1.25rem,2.25vw,1.82rem);margin-bottom:10px}
+.page-ginger .page-text .story-location{margin-top:12px;font:normal 0.78rem/1.4 var(--sans, sans-serif);opacity:.7}
+.page-ginger .page-text.story-full-text .story-controls{left:38px;right:38px;bottom:19px}
+.page-ginger .page-text.story-reverse{padding:44px 40px 80px;align-items:start;justify-content:center}
+.page-ginger .page-text.story-reverse .story-prev{position:absolute;left:24px;bottom:24px}
+.page-ginger .page-dedication{position:absolute;inset:0;background:#f1eadf;border:3px solid var(--vino-dark);border-right:0;border-radius:10px 0 0 10px;display:flex;align-items:center;justify-content:center;padding:28px;box-shadow:-10px 16px 34px -18px #3a170f8c}
+.page-ginger .page-dedication .dedication-oval{background:#fffaf3;border-radius:50%;padding:40px 20px;max-width:100%;text-align:center;color:var(--cafe)}
+.page-ginger .page-dedication .dedication-oval p{font:normal 0.95rem/1.5 var(--serif);margin:0 0 14px}
+.page-ginger .page-dedication .story-prev{position:absolute;left:24px;bottom:24px}
+.page-ginger .story-end-actions{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.page-ginger .story-end-link{background:#fff6ea;color:var(--vino);border-radius:99px;text-decoration:none;font:700 0.88rem/1.4 var(--sans,sans-serif);padding:11px 18px}
+.page-ginger .story-end-link:hover,.page-ginger .story-end-link:focus-visible{background:#fff;color:#4a170f;text-decoration:underline}
+.page-ginger .page-end{padding:26px}
+@media(max-width:760px){
+  #hoja-13:checked ~ .flip-stage .leaf-13{transform:rotateX(180deg)}
+  .page-ginger .page-text.story-full-text{padding:22px 18px 68px}
+  .page-ginger .page-text.story-full-text h3{font-size:1.4rem;margin:0 0 8px}
+  .page-ginger .page-text .story-paragraph{font-size:.92rem;line-height:1.55}
+  .page-ginger .page-text .story-location{font-size:.71rem;line-height:1.3;margin-top:6px}
+  .page-ginger .page-text.story-full-text .story-controls{left:18px;right:18px;bottom:12px}
+  .page-ginger .page-text.story-reverse{padding:28px 20px 70px}
+  .page-ginger .page-dedication{padding:15px;border-right:3px solid var(--vino-dark);border-bottom:0;border-radius:10px 10px 0 0}
+  .page-ginger .page-dedication .dedication-oval{padding:18px 10px}
+  .page-ginger .page-dedication .dedication-oval p{font-size:.84rem;line-height:1.35;margin-bottom:8px}
+  .page-ginger .page-end .fin{font-size:2.2rem}
+  .page-ginger .page-end p{font-size:.94rem}
+  .page-ginger .story-end-link{padding:8px 12px;font-size:.78rem}
+}
+/* Contraste legible de la dedicatoria y los enlaces finales. */
+.page-ginger .page-dedication .dedication-oval p{color:#40271b}
+.page-ginger .page-end > p:not(.fin){color:#fff9f0}
+
+/* Única modificación de presentación: bienvenida en la primera página del cuento. */
+.page-ginger .page-text.story-full-text.story-intro {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 42px 34px 82px;
+}
+.page-ginger .story-intro .story-intro-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: translateY(16px);
+}
+.page-ginger .story-intro .story-intro-ginger {
+  display: block;
+  width: min(68%, 255px);
+  max-height: 275px;
+  height: auto;
+  object-fit: contain;
+}
+.page-ginger .page-text.story-intro .story-number {
+  margin: 0 0 3px;
+}
+.page-ginger .page-text.story-intro .story-paragraph {
+  margin: 0;
+  text-align: center;
+  line-height: 1.55;
+}
+@media (max-width: 760px) {
+  .page-ginger .page-text.story-full-text.story-intro {
+    padding: 18px 18px 62px;
+  }
+  .page-ginger .story-intro .story-intro-content {
+    gap: 7px;
+    transform: translateY(8px);
+  }
+  .page-ginger .story-intro .story-intro-ginger {
+    width: min(56%, 175px);
+    max-height: min(31vh, 205px);
+  }
+}
+
+/* =====================================================================
+   INTEGRACIÓN (Daniela González)
+   1. Libro cerrado: las hojas de abajo no se dibujan mientras la portada
+      (o la contraportada) está cerrada. Así sus sombras ya no se suman
+      alrededor del libro y el borde se ve limpio, sin escalones.
+   2. Al terminar el cuento, «Cerrar el libro» gira la última hoja
+      (casilla hoja-14) y se ve la contraportada con los enlaces a
+      La Carta y a las Tortas. «Volver a abrir» regresa a la página final.
+   3. Lugares de cada capítulo en color caramelo.
+   ===================================================================== */
+.page-ginger .flip-leaf{transition:transform 1.5s cubic-bezier(.4,.1,.25,1),z-index 0s linear .75s,visibility 0s linear 0s}
+.page-ginger .flipbook:not(:has(#hoja-0:checked)) .flip-leaf:not(.leaf-0),
+.page-ginger .flipbook:has(#hoja-14:checked) .flip-leaf:not(.leaf-14){visibility:hidden;transition:transform 1.5s cubic-bezier(.4,.1,.25,1),z-index 0s linear .75s,visibility 0s linear 1.4s}
+
+#hoja-14:checked ~ .flip-stage .leaf-14{transform:rotateY(-180deg);z-index:calc(50 + var(--k))}
+#hoja-14:focus-visible ~ .flip-stage .leaf-14 .story-close,
+#hoja-14:focus-visible ~ .flip-stage .leaf-14 .story-reopen{outline:3px solid #f6d9a8;outline-offset:3px}
+.page-ginger .flipbook:has(#hoja-14:checked) .flip-stage{transform:translateX(25%)}
+
+.page-ginger .story-close,
+.page-ginger .story-reopen{margin-top:18px;padding:11px 20px;border-radius:999px;background:#fff6ea;color:var(--vino);font:700 .9rem/1.3 var(--sans);cursor:pointer;transition:background .2s}
+.page-ginger .story-close:hover,
+.page-ginger .story-reopen:hover{background:#fff}
+.page-ginger .story-reopen{background:transparent;color:#fff3df;border:1px solid #f6d9a866;margin-top:14px}
+.page-ginger .story-reopen:hover{background:#ffffff1a}
+
+.page-ginger .page-backcover{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:36px;
+  border-radius:10px 4px 4px 10px;color:#fff3df;box-shadow:-10px 18px 40px -14px #3a170fa6;
+  background:
+    radial-gradient(circle at 12% 18%,#ffffff14 0 1.5px,transparent 2.5px) 0 0/46px 46px,
+    radial-gradient(ellipse at 30% 30%,#b3263a 0%,transparent 60%),
+    var(--vino)}
+.page-ginger .page-backcover::after{content:"";position:absolute;top:0;bottom:0;right:0;width:18px;background:linear-gradient(270deg,#00000033,#ffffff22 60%,transparent)}
+.page-ginger .backcover-logo{width:96px;height:96px;object-fit:contain;border-radius:50%;background:#fff8ec;padding:5px;box-shadow:0 8px 20px #2a050a66}
+.page-ginger .backcover-title{margin:6px 0 0;font:700 2rem/1.05 var(--serif);color:#f6d9a8}
+.page-ginger .backcover-text{margin:0 0 4px;max-width:26ch;color:#fff9f0;font-size:.98rem}
+
+.page-ginger .page-text .story-location{color:var(--caramelo);opacity:1;font-weight:600}
+
+@media(max-width:760px){
+  /* En celular el libro cerrado por detrás ocupa todo el alto, igual que la portada */
+  #hoja-14:checked ~ .flip-stage .leaf-14{transform:none;top:0;height:100%}
+  .page-ginger .flipbook:has(#hoja-14:checked) .flip-stage{transform:none;aspect-ratio:4/5}
+  #hoja-14:checked ~ .flip-stage .leaf-14 .flip-front{visibility:hidden}
+  #hoja-14:checked ~ .flip-stage .leaf-14 .flip-back{transform:none}
+  .page-ginger .page-backcover{border-radius:4px 10px 10px 4px;padding:24px}
+  .page-ginger .backcover-title{font-size:1.6rem}
+}

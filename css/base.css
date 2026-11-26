@@ -1,0 +1,128 @@
+/* ======================================================
+   AUTORA: DANIELA GONZÁLEZ — BASE GENERAL
+   Paleta en variables, tipografía, modelo de caja, encabezado,
+   navegación, botones y pie de página compartidos por todo el sitio.
+   ====================================================== */
+:root{--vino:#8c1723;--vino-dark:#6e101a;--pino:#344226;--vainilla:#f8efe3;--papel:#fff9ef;--crema:#f5e3cc;--caramelo:#be8355;--cafe:#422a21;--gris:#735b4b;--sombra:0 12px 30px #4f2c1714;--ancho:1200px;--radio:23px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--papel);color:var(--cafe);font:16px/1.6 'DM Sans',Arial,sans-serif}img{display:block;max-width:100%;height:auto}a{color:inherit}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.13}h1{font-size:clamp(3rem,6.4vw,5.7rem)}h2{font-size:clamp(2rem,4.2vw,3.6rem)}h3{font-size:1.4rem}em{font-style:italic}button,input,select,textarea{font:inherit}input,select,textarea{color:var(--cafe)}.container{width:min(var(--ancho),calc(100% - 64px));margin-inline:auto}.section-anchor{scroll-margin-top:95px}.eyebrow{font-size:.73rem;font-weight:700;letter-spacing:.19em;color:var(--vino)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:12px 27px;border-radius:999px;text-decoration:none;font-weight:700;line-height:1.2;cursor:pointer;border:1.5px solid transparent;transition:transform .2s,box-shadow .2s,background .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px #38160f22}.btn-primary{background:var(--vino);color:white}.btn-primary:hover{background:var(--vino-dark)}.btn-outline{color:var(--vino);border-color:var(--caramelo);background:#fff8ed}.btn-light{background:#fff4e4;color:var(--vino)}.btn-small{padding:10px 17px;font-size:.85rem}.site-header{position:relative;z-index:5;background:#fff8ed;border-bottom:1px solid #d8bfa258}.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:102px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}.brand-logo{width:74px;height:74px;object-fit:contain}.brand-copy strong{display:block;font:700 1.65rem/.98 'Playfair Display',Georgia,serif;color:var(--vino)}.brand-copy small{display:block;margin-top:8px;font-size:.53rem;letter-spacing:.2em;font-weight:700}.main-nav{display:flex;align-items:center;gap:clamp(12px,2.2vw,30px);flex-wrap:wrap;justify-content:flex-end}.main-nav>a:not(.btn){font-size:.88rem;text-decoration:none;position:relative}.main-nav>a:not(.btn):hover,.main-nav>a.is-active:not(.btn){color:var(--vino)}.main-nav>a.is-active:not(.btn)::after{content:"";position:absolute;bottom:-9px;height:2px;background:var(--vino);left:0;right:0}.section-heading{text-align:center;max-width:720px;margin:0 auto 38px}.section-heading .eyebrow{margin-bottom:4px}.section-heading h2{margin-bottom:5px;color:var(--pino)}.section-heading h2 em{color:var(--vino)}.section-heading p:last-child{margin:10px auto 0;max-width:570px}.heart-deco{font:2rem Georgia,serif;color:var(--vino);line-height:1}.pending-note{font-size:.82rem;color:var(--gris);border-left:3px solid #bf9c73;padding:7px 10px;background:#fff5e5}.site-footer{background:#fdf3e8;border-top:1px solid #e9d5c2;padding:40px 0 16px}.footer-inner{display:grid;grid-template-columns:1.05fr 1.2fr 1.2fr 1.3fr;gap:24px}.footer-brand{font:1.5rem/1 'Playfair Display',serif;color:var(--vino);text-decoration:none}.footer-label{font-size:.7rem;color:var(--vino);font-weight:700;letter-spacing:.1em}.footer-inner p{font-size:.84rem;margin:7px 0}.footer-inner a:hover{color:var(--vino)}.footer-bottom{text-align:center;border-top:1px solid #ead9c7;margin-top:26px;padding-top:13px;font-size:.7rem;color:var(--gris)}.skip-link{position:absolute;top:-100px;left:8px;z-index:999;background:#fff;padding:6px}.skip-link:focus{top:8px}#contenido{min-height:50vh}
+@media(max-width:900px){.nav-wrap{align-items:flex-start;flex-direction:column;padding:12px 0 18px;gap:14px}.main-nav{justify-content:flex-start}.footer-inner{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.container{width:min(var(--ancho),calc(100% - 30px))}.brand-logo{width:60px;height:60px}.brand-copy strong{font-size:1.4rem}.main-nav{gap:12px 18px}.main-nav>a:not(.btn){font-size:.83rem}.footer-inner{grid-template-columns:1fr}.site-footer{padding-top:28px}}
+
+.decorated-corners{position:relative;isolation:isolate}.decorated-corners:before{content:'';position:absolute;inset:0;z-index:-1;background-image:none;background-size:100% 100%;background-repeat:no-repeat;pointer-events:none;opacity:.78}.decorated-corners>.container{position:relative;z-index:1}.work-placeholder{color:#85634f;font-style:italic;font-size:.89rem;line-height:1.55;border:1px dashed #be967a;background:#fff9f1d9;padding:12px 14px;border-radius:12px}.cake-info .work-placeholder{font-size:.74rem;padding:6px;border:0;background:transparent}.menu-category .work-placeholder{padding:14px}.decorated-corners{overflow:hidden}
+@media(max-width:700px){.decorated-corners:before{background-size:100% auto;background-position:top center;opacity:.55}}
+
+.decorated-corners::before{content:none!important;background-image:none!important}
+.work-placeholder{min-height:44px;display:flex;align-items:center;justify-content:center;text-align:center;color:#8c1723;background:#fff9f0;border:1.5px dashed #c19d7b;border-radius:13px;font-style:normal;font-weight:600;font-size:.84rem;padding:15px}
+
+
+/* ======================================================
+   EVALUACIÓN 3 · DANIELA GONZÁLEZ
+   Reglas generales movidas desde ajustes-daniela.css
+   (bloques 1 tipografías, 12 pie de página, 16 menú fijo,
+   25 botón de WhatsApp y su parte del responsive).
+   ====================================================== */
+@font-face{font-family:'Lora Local';src:url('../fonts/lora-variable.ttf') format('truetype');font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Lora Local';src:url('../fonts/lora-italic-variable.ttf') format('truetype');font-weight:400 700;font-style:italic;font-display:swap}
+@font-face{font-family:'Poppins Local';src:url('../fonts/poppins-regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Poppins Local';src:url('../fonts/poppins-medium.ttf') format('truetype');font-weight:500 600;font-display:swap}
+@font-face{font-family:'Poppins Local';src:url('../fonts/poppins-bold.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{
+  --serif:'Playfair Display','Lora Local',Georgia,serif;
+  --sans:'DM Sans','Poppins Local',Arial,sans-serif;
+  --dorado:#e8b866;
+}
+body,button,input,select,textarea{font-family:var(--sans)}
+h1,h2,h3,.brand-copy strong,.footer-brand,.heart-deco{font-family:var(--serif)}
+h4,.eyebrow,.footer-label,.btn{font-family:var(--sans)}
+.footer-brand{display:flex;align-items:center;gap:12px;align-self:start}
+.footer-logo{width:68px;height:68px;object-fit:contain;flex-shrink:0}
+.footer-brand span{display:block;line-height:1.05}
+.site-header{position:sticky;top:0;z-index:50;box-shadow:0 4px 18px -12px #4f2c1755}
+.nav-wrap{min-height:84px}
+.brand-logo{width:62px;height:62px}
+.section-anchor{scroll-margin-top:100px}
+@media(max-width:900px){
+  .nav-wrap{padding:8px 0 10px;gap:8px}
+.brand-logo{width:48px;height:48px}
+.brand-copy small{display:none}
+}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;display:inline-flex;align-items:center;gap:10px;padding:10px 20px 10px 10px;border-radius:999px;background:var(--pino);color:#fff;font-weight:700;font-size:.95rem;text-decoration:none;box-shadow:0 10px 26px -8px #1d2614a6;transition:transform .2s,background .2s}
+.wa-float:hover{transform:translateY(-3px);background:#26311c;color:#fff}
+.wa-icon{width:36px;height:36px;padding:7px;border-radius:50%;background:#25d366;fill:#fff;flex-shrink:0}
+@media(max-width:760px){
+  .wa-float{padding:8px;right:16px;bottom:16px}
+.wa-float span{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .wa-float{transition:none}
+}
+
+/* ======================================================
+   INTEGRACIÓN (Daniela González) · Títulos de las secciones de color
+   Etiqueta superior dorada que se usa en las partes rojas y verdes
+   (Experiencias y Misión y Visión), igual que en "Su misión".
+   ====================================================== */
+.section-kicker{margin:0 0 10px;font:700 .74rem/1 var(--sans);letter-spacing:.22em;color:#f6d9a8}
+
+/* ======================================================
+   INTEGRACIÓN (Daniela González) · Puntitos y luces sutiles
+   Las secciones claras de todas las páginas llevan los mismos
+   puntitos de nieve y luces suaves de las partes de color, pero
+   muy suaves. Se dibujan detrás del contenido (z-index:-1),
+   sin tapar textos ni imágenes.
+   ====================================================== */
+main>section:not(.testimonials-section):not(.ginger-mission),.site-footer{position:relative;isolation:isolate}
+main>section:not(.testimonials-section):not(.ginger-mission)::after,.site-footer::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(circle at 12% 18%,#be835524 0 1.5px,transparent 2.5px) 0 0/46px 46px,
+    radial-gradient(circle at 80% 70%,#be83551a 0 1.5px,transparent 2.5px) 0 0/64px 64px,
+    radial-gradient(ellipse at 15% 20%,#f2d9b947 0%,transparent 50%),
+    radial-gradient(ellipse at 88% 85%,#e8b8661f 0%,transparent 45%)}
+
+/* ======================================================
+   INTEGRACIÓN (Daniela González) · Menú en celular
+   Botón de tres líneas para la navegación de Jorge Aravena
+   (js/assan-nav.js agrega la clase is-open al menú).
+   ====================================================== */
+.menu-toggle{display:none}
+@media(max-width:900px){
+  .nav-wrap{flex-direction:row;flex-wrap:wrap;align-items:center;padding:8px 0}
+  .menu-toggle{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:42px;margin-left:auto;padding:0 11px;border:1px solid #c7a185;border-radius:10px;background:#fff8ed;cursor:pointer}
+  .menu-toggle span{display:block;height:2px;border-radius:2px;background:var(--vino)}
+  .menu-toggle:focus-visible{outline:3px solid #b4774d;outline-offset:3px}
+  .main-nav{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;gap:2px;padding:6px 0 12px}
+  .main-nav.is-open{display:flex}
+  .main-nav>a:not(.btn){padding:10px 12px;border-radius:8px}
+  .main-nav>a.is-active:not(.btn){background:#f5e7d7}
+  .main-nav>a.is-active:not(.btn)::after{display:none}
+  .main-nav>.btn{align-self:flex-start;margin-top:6px}
+}
+
+/* ======================================================
+   EVALUACIÓN 3 · DANIELA GONZÁLEZ
+   Botón "Volver arriba": se usa el botón back-to-top del template.
+   Aparece al bajar la página (js/general.js agrega la clase .show).
+   Se le da el color de la marca y se ubica sobre el botón de WhatsApp
+   para que no se tapen.
+   ====================================================== */
+.back-to-top{background:var(--vino);color:#fff;text-decoration:none;text-align:center;right:30px;bottom:96px;box-shadow:0 8px 20px #38160f33}
+.back-to-top:hover,.back-to-top:focus{background:var(--vino-dark);color:#fff}
+@media(max-width:760px){.back-to-top{right:20px;bottom:80px;width:44px;height:44px}.back-to-top i{line-height:44px;font-size:22px}}
+
+/* =====================================================================
+   EVALUACIÓN 3 · Reglas trasladadas desde ajustes-daniela.css
+   (Integración, Daniela González). Corresponden a: Daniela González (botones generales).
+   Se copiaron tal cual, en el mismo orden, y se eliminó ajustes-daniela.css
+   como pidió la docente (no tener un archivo de ajustes aparte).
+   ===================================================================== */
+.btn-outline-light{color:#fff3df;border-color:#f6d9a8;background:transparent}
+.btn-outline-light:hover{background:#fff3df;color:var(--vino)}
+/* 23. TORTAS COMO PROTAGONISTAS: botón de pedido en cada torta, foto que se acerca al pasar el mouse */
+/* → EV3: lo de Jorge Medina ya está en tortas.css. Lo que queda aquí se revisa al unir. */
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn-whatsapp{background:var(--pino);color:#fff;border:0}
+.btn-whatsapp:hover{background:#26311c;color:#fff}
+/* Nota bajo el título de los encabezados (se usa en Inicio, La Carta y Haz tu pedido) */
+.carta-local-nota a{color:var(--vino);font-weight:700}
+.carta-local-nota{display:inline-block;margin:4px 0 22px;padding:8px 14px;border-left:3px solid var(--caramelo);background:#fff8ee;border-radius:0 10px 10px 0;font-size:.92rem;color:var(--cafe)}

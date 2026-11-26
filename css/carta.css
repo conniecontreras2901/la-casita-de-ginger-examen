@@ -1,0 +1,419 @@
+/* =====================================================================
+   carta.css · JORGE ARAVENA (Evaluación 3)
+   Se carga en carta.html, después de ajustes-daniela.css.
+   Contiene: (1) las reglas de La Carta de la Ev. 2 trasladadas desde
+   tortas.css en la integración y (2) los estilos nuevos de Jorge Aravena:
+   pestañas del template Assan y Preparaciones especiales.
+   ===================================================================== */
+
+
+/* ======================================================
+   INTEGRACIÓN (Daniela González)
+   Reglas de La Carta de la Ev. 2 que estaban en tortas.css.
+   Jorge Medina las retiró de tortas.css, así que se trasladaron
+   aquí sin cambios para que La Carta no pierda su diseño.
+   Jorge Aravena puede modificarlas en su rediseño.
+   ====================================================== */
+/* --- SECCIÓN LA CARTA --- */
+.carta-section {
+    padding: 70px 0;
+    background: radial-gradient(circle at top, #f9eddc, #f6e4cf);
+}
+
+.carta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Modelo de caja para las categorías del menú */
+.menu-category {
+    padding: 28px 26px;
+    background: #fffbf3;
+    border: 1px solid #e8cbae;
+    border-radius: 21px;
+    box-shadow: 0 6px 22px #71412d13;
+}
+
+.menu-category h3 {
+    color: var(--vino, #721c24);
+    margin-top: 0;
+    margin-bottom: 18px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #c8a37b;
+}
+
+/* Uso de Flexbox para alinear nombre y precio */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid #e9d8c2;
+}
+
+.menu-item:last-child {
+    border-bottom: 0;
+}
+
+.menu-item-details {
+    min-width: 0;
+}
+
+.menu-item-name {
+    font-weight: 700;
+    margin: 0;
+    color: #4b2e2a;
+    font-size: 0.95rem;
+}
+
+.menu-item-desc {
+    display: block;
+    color: #666;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.menu-item-price {
+    white-space: nowrap;
+    color: var(--pino, #274f38);
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 700px) {
+    .carta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 390px) {
+    .menu-category {
+        padding: 18px;
+    }
+}
+
+
+/* =====================================================================
+   EVALUACIÓN 3 · Reglas trasladadas desde ajustes-daniela.css
+   (Integración, Daniela González). Corresponden a: Jorge Aravena (La Carta de la Ev. 2).
+   Se copiaron tal cual, en el mismo orden, y se eliminó ajustes-daniela.css
+   como pidió la docente (no tener un archivo de ajustes aparte).
+   ===================================================================== */
+.menu-category h3{font-family:var(--serif)}
+.menu-item-name{font-family:var(--sans)}
+.carta-hero{position:relative;display:flex;align-items:center;min-height:540px;overflow:hidden}
+.carta-hero-grid{position:static;display:block;min-height:0}
+.carta-hero-copy{position:relative;z-index:2;max-width:min(520px,47%);padding:64px 0 60px}
+.carta-hero-photo{
+  position:absolute;top:0;right:0;bottom:0;left:auto;
+  width:56%;height:100%;min-height:0;max-width:none;max-height:none;
+  object-fit:cover;object-position:center 35%;opacity:1;filter:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 30%);
+}
+.carta-hero{background:linear-gradient(100deg,var(--papel) 10%,#fff3e3 50%,#f2d9b9)}
+.carta-hero h1{color:var(--pino);font-size:clamp(3rem,6vw,5.6rem);line-height:1.06;margin-bottom:20px}
+.carta-hero h1 em{color:var(--vino)}
+.carta-hero-copy p:not(.eyebrow){max-width:420px;font-size:1.1rem;line-height:1.7}
+/* 8. LA CARTA (carta.html): menú por categorías como la referencia */
+/* → EV3: este bloque pasa a carta.css · Jorge Aravena */
+.page-carta .carta-section{padding:60px 0 80px}
+.carta-radio{position:fixed;top:50%;left:50%;opacity:0;width:1px;height:1px;pointer-events:none}
+.carta-tabs{display:block}
+.carta-menu{display:flex;gap:6px;overflow-x:auto;padding:0 0 2px;margin-bottom:34px;border-bottom:1px solid #e3cdb2;scrollbar-width:thin}
+.carta-menu label{flex:1 1 0;min-width:104px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 12px 12px;cursor:pointer;color:var(--cafe);font-size:.86rem;font-weight:600;text-align:center;border-bottom:3px solid transparent;border-radius:14px 14px 0 0;transition:background .2s,color .2s}
+.carta-menu label:hover{background:#fff1df;color:var(--vino)}
+.carta-menu svg{width:30px;height:30px;fill:none;stroke:var(--vino);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.carta-tabs .menu-category{display:none;padding:0;background:none;border:0;box-shadow:none}
+.carta-tabs .menu-category h3{font-size:clamp(1.8rem,3vw,2.4rem);color:var(--pino);border:0;padding:0;margin-bottom:22px}
+.carta-tabs .menu-lines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.carta-tabs .menu-item{display:flex;flex-direction:column;justify-content:space-between;gap:12px;min-height:118px;padding:20px 24px;background:#fffdf8;border:1px solid #ead6bf;border-radius:18px;box-shadow:0 3px 0 #ead6bf}
+.carta-tabs .menu-item:last-child{border-bottom:1px solid #ead6bf}
+.menu-item-name{margin:0;font-size:1.05rem;font-weight:700;line-height:1.35;color:var(--cafe)}
+.menu-item-desc{margin:5px 0 0;font-size:.9rem;line-height:1.55;color:var(--gris)}
+.menu-item-price{font-weight:700;font-size:1.08rem;color:var(--vino)}
+@media(max-width:760px){
+  .carta-hero{display:block;min-height:0}
+  .carta-hero-copy{max-width:none;padding:56px 0 18px}
+  .carta-hero-photo{
+    position:relative;display:block;width:calc(100% + 64px);height:300px;margin-inline:-32px;
+    -webkit-mask-image:linear-gradient(0deg,#000 70%,transparent);mask-image:linear-gradient(0deg,#000 70%,transparent)}
+  .carta-tabs .menu-lines{grid-template-columns:1fr}
+}
+@media(max-width:580px){
+  .carta-hero-photo{margin-inline:-15px}
+  .carta-hero-photo{width:calc(100% + 30px)}
+}
+/* 14. REGLAS POR CAPÍTULO Y POR CATEGORÍA (mostrar el elegido, marcar su punto o pestaña) */
+/* → EV3: este bloque pasa a ginger.css (capítulos) y carta.css (categorías) · Jorge Aravena */
+#carta-tab-1:checked ~ .menu-category:nth-of-type(1){display:block;animation:desplegar .35s ease}
+#carta-tab-1:checked ~ .carta-menu label[for=carta-tab-1]{color:var(--vino);background:#fff1df;border-bottom-color:var(--vino)}
+#carta-tab-1:focus-visible ~ .carta-menu label[for=carta-tab-1]{outline:3px solid var(--pino);outline-offset:-3px}
+#carta-tab-2:checked ~ .menu-category:nth-of-type(2){display:block;animation:desplegar .35s ease}
+#carta-tab-2:checked ~ .carta-menu label[for=carta-tab-2]{color:var(--vino);background:#fff1df;border-bottom-color:var(--vino)}
+#carta-tab-2:focus-visible ~ .carta-menu label[for=carta-tab-2]{outline:3px solid var(--pino);outline-offset:-3px}
+#carta-tab-3:checked ~ .menu-category:nth-of-type(3){display:block;animation:desplegar .35s ease}
+#carta-tab-3:checked ~ .carta-menu label[for=carta-tab-3]{color:var(--vino);background:#fff1df;border-bottom-color:var(--vino)}
+#carta-tab-3:focus-visible ~ .carta-menu label[for=carta-tab-3]{outline:3px solid var(--pino);outline-offset:-3px}
+#carta-tab-4:checked ~ .menu-category:nth-of-type(4){display:block;animation:desplegar .35s ease}
+#carta-tab-4:checked ~ .carta-menu label[for=carta-tab-4]{color:var(--vino);background:#fff1df;border-bottom-color:var(--vino)}
+#carta-tab-4:focus-visible ~ .carta-menu label[for=carta-tab-4]{outline:3px solid var(--pino);outline-offset:-3px}
+#carta-tab-5:checked ~ .menu-category:nth-of-type(5){display:block;animation:desplegar .35s ease}
+#carta-tab-5:checked ~ .carta-menu label[for=carta-tab-5]{color:var(--vino);background:#fff1df;border-bottom-color:var(--vino)}
+#carta-tab-5:focus-visible ~ .carta-menu label[for=carta-tab-5]{outline:3px solid var(--pino);outline-offset:-3px}
+#carta-tab-6:checked ~ .menu-category:nth-of-type(6){display:block;animation:desplegar .35s ease}
+#carta-tab-6:checked ~ .carta-menu label[for=carta-tab-6]{color:var(--vino);background:#fff1df;border-bottom-color:var(--vino)}
+#carta-tab-6:focus-visible ~ .carta-menu label[for=carta-tab-6]{outline:3px solid var(--pino);outline-offset:-3px}
+#carta-tab-7:checked ~ .menu-category:nth-of-type(7){display:block;animation:desplegar .35s ease}
+#carta-tab-7:checked ~ .carta-menu label[for=carta-tab-7]{color:var(--vino);background:#fff1df;border-bottom-color:var(--vino)}
+#carta-tab-7:focus-visible ~ .carta-menu label[for=carta-tab-7]{outline:3px solid var(--pino);outline-offset:-3px}
+#carta-tab-8:checked ~ .menu-category:nth-of-type(8){display:block;animation:desplegar .35s ease}
+#carta-tab-8:checked ~ .carta-menu label[for=carta-tab-8]{color:var(--vino);background:#fff1df;border-bottom-color:var(--vino)}
+#carta-tab-8:focus-visible ~ .carta-menu label[for=carta-tab-8]{outline:3px solid var(--pino);outline-offset:-3px}
+/* Carta: galletitas como íconos de cada categoría */
+/* → EV3: este bloque pasa a carta.css · Jorge Aravena */
+.carta-menu img{width:54px;height:54px;object-fit:contain;transition:transform .25s}
+.carta-menu label:hover img{transform:translateY(-3px) rotate(-4deg)}
+/* "Consultar" lleva a Haz tu pedido */
+/* → EV3: este bloque pasa a carta.css · Jorge Aravena */
+.menu-consultar{align-self:flex-start;text-decoration:none;border-bottom:2px solid #e3b8b0}
+.menu-consultar:hover{color:var(--vino-dark);border-bottom-color:var(--vino)}
+/* 22. TARJETAS DE LA CARTA: efecto al pasar el mouse (propuesta de Jorge Medina) */
+/* → EV3: este bloque pasa a carta.css · Jorge Aravena */
+.carta-tabs .menu-item{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.carta-tabs .menu-item:hover{transform:translateY(-3px);border-color:var(--caramelo);box-shadow:0 10px 22px -10px #4f2c1740}
+@media(prefers-reduced-motion:reduce){
+  .carta-tabs .menu-item{transition:none}
+  .carta-tabs .menu-item:hover{transform:none}
+}
+
+/* =====================================================================
+   JORGE ARAVENA · Evaluación 3
+   Rediseño de La Carta con las pestañas del template Assan
+   y sección Preparaciones especiales (archivo original de Jorge).
+   ===================================================================== */
+/* La Carta · Evaluación 3. Adaptación de las pestañas de menú Assan.
+   Estilos específicos de la carta, sin modificar tortas.css ni otras páginas. */
+.page-carta .carta-section { padding: 72px 0 88px; background:linear-gradient(170deg,#fcf3e8,#fffaf3); }
+.page-carta .assan-menu-organized { max-width:1160px; margin-inline:auto; }
+.page-carta .carta-nav-scroll { overflow-x:auto; max-width:100%; border-bottom:1px solid #e3cdb2; margin-bottom:32px; scrollbar-width:thin; }
+.page-carta .assan-menu-tabs { display:flex; flex-wrap:nowrap; gap:10px; min-width:max-content; margin:0; padding:3px 4px 12px; border:0; }
+.page-carta .assan-menu-tab { appearance:none; border:1px solid #e9d8c4; border-radius:15px; padding:14px 19px; min-width:145px; flex:1 0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:9px; background:#fffdf8; color:#4b2e2a; font:700 .9rem/1.3 'DM Sans',Arial,sans-serif; cursor:pointer; transition:background .2s,border-color .2s,transform .2s; white-space:normal; }
+.page-carta .assan-menu-tab img { display:block; width:49px; height:49px; object-fit:contain; }
+.page-carta .assan-menu-tab:hover { background:#fff0de; transform:translateY(-2px); }
+.page-carta .assan-menu-tab.active, .page-carta .assan-menu-tab[aria-selected="true"] { color:#8e1422; border-color:#aa7250; background:#fff0dc; box-shadow:inset 0 -3px #961a2c; }
+.page-carta .assan-menu-tab:focus-visible { outline:3px solid #295239; outline-offset:2px; }
+.page-carta .assan-menu-panel[hidden] { display:none !important; }
+.page-carta .assan-menu-panel { padding:0; background:transparent; border:0; box-shadow:none; }
+.page-carta .carta-category-heading { margin:0 0 27px; }
+.page-carta .carta-category-heading h2 { margin:8px 0 0; font:600 clamp(2rem,3.4vw,2.8rem)/1.18 'Playfair Display',Georgia,serif; color:#2e452d; }
+.page-carta .carta-category-heading .eyebrow { margin:0; }
+.page-carta .carta-subgroup { margin:0 0 34px; }
+.page-carta .carta-subgroup h3 { display:block; margin:0 0 16px; padding-bottom:11px; border-bottom:1px solid #d7b792; font:600 clamp(1.35rem,2.4vw,1.8rem)/1.25 'Playfair Display',Georgia,serif; color:#92172a; }
+.page-carta .assan-menu-panel .menu-lines { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
+.page-carta .assan-menu-panel .menu-item { display:flex; flex-direction:column; justify-content:space-between; min-height:115px; gap:15px; border:1px solid #ead6bf; background:#fffdf8; border-radius:17px; padding:19px 22px; box-shadow:0 3px 0 #ead6bf; }
+.page-carta .assan-menu-panel .menu-item:last-child { border-bottom:1px solid #ead6bf; }
+.page-carta .assan-menu-panel .menu-item-name { font:700 1.03rem/1.43 'DM Sans',Arial,sans-serif; margin:0; color:#422812; }
+.page-carta .assan-menu-panel .menu-item-desc { margin:6px 0 0; color:#66564c; font:400 .91rem/1.5 'DM Sans',Arial,sans-serif; }
+.page-carta .assan-menu-panel .menu-item-price { color:#941c2c; font:700 1.08rem/1.3 'DM Sans',Arial,sans-serif; text-align:left; }
+.page-carta .pending-note { max-width:970px; margin:26px 0 0; font-size:.84rem; line-height:1.5; color:#725c4c; }
+@media (max-width:730px) {
+ .page-carta .carta-section { padding:44px 0 64px; }
+ .page-carta .assan-menu-tabs { gap:8px; }
+ .page-carta .assan-menu-tab { min-width:132px; padding:12px 14px; }
+ .page-carta .assan-menu-panel .menu-lines { grid-template-columns:1fr; gap:11px; }
+ .page-carta .assan-menu-panel .menu-item { min-height:0; padding:17px 18px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .page-carta .assan-menu-tab { transition:none; }
+ .page-carta .assan-menu-tab:hover { transform:none; }
+}
+
+/* Bootstrap ocultaba todos los paneles por faltarles la clase active.
+   Hacemos explícito el estado para que se vea la categoría seleccionada. */
+.page-carta .tab-content > .assan-menu-panel.active:not([hidden]) { display:block; }
+.page-carta .tab-content > .assan-menu-panel[hidden] { display:none !important; }
+
+
+/* PREPARACIONES ESPECIALES — bloque real debajo del catálogo de La Carta.
+   Diseño basado en el boceto aprobado; estilos aislados para no alterar Tortas. */
+.page-carta .carta-especiales {
+  background:#fdf5eb;
+  border-top:1px solid #ead5bd;
+  padding:82px 0 90px;
+}
+.page-carta .carta-especiales-grid {
+  display:grid;
+  grid-template-columns:minmax(0,.95fr) minmax(0,1.18fr);
+  align-items:center;
+  gap:clamp(28px,4vw,68px);
+}
+.page-carta .carta-especiales-collage { margin:0; min-width:0; }
+.page-carta .carta-especiales-fotos {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:start;
+  gap:13px;
+}
+.page-carta .carta-especiales-fotos img {
+  display:block;
+  width:100%;
+  aspect-ratio:308/462;
+  height:auto;
+  object-fit:cover;
+  border-radius:23px;
+  box-shadow:0 8px 20px #603d241c;
+}
+.page-carta .carta-especiales-fotos img:nth-child(2) {
+  margin-top:38px;
+  aspect-ratio:302/411;
+}
+.page-carta .carta-especiales-collage figcaption {
+  margin-top:15px;
+  text-align:center;
+  font:italic .86rem/1.5 'DM Sans',Arial,sans-serif;
+  color:#8b5c3d;
+}
+.page-carta .carta-especiales-copy { min-width:0; }
+.page-carta .carta-especiales-copy .eyebrow { margin:0 0 17px; }
+.page-carta .carta-especiales-copy h2 {
+  margin:0 0 19px;
+  font:500 clamp(2.45rem,4.15vw,3.9rem)/1.12 'Playfair Display',Georgia,serif;
+  color:#34492e;
+}
+.page-carta .carta-especiales-copy h2 em { color:#90172b; }
+.page-carta .carta-especiales-intro {
+  margin:0 0 25px;
+  max-width:58ch;
+  color:#817e7a;
+  font:400 clamp(.96rem,1.15vw,1.11rem)/1.75 'DM Sans',Arial,sans-serif;
+}
+.page-carta .carta-especiales-opciones {
+  display:flex;
+  align-items:center;
+  gap:clamp(14px,2vw,30px);
+  margin:0 0 25px;
+}
+.page-carta .carta-especiales-ginger {
+  display:block;
+  width:clamp(85px,9vw,130px);
+  height:auto;
+  flex-shrink:0;
+  filter:drop-shadow(0 8px 9px #4f2c1728);
+}
+.page-carta .carta-especiales-opciones ul { padding:0; margin:0; list-style:none; }
+.page-carta .carta-especiales-opciones li {
+  position:relative;
+  padding-left:22px;
+  margin:6px 0;
+  color:#432d22;
+  font:600 clamp(.9rem,1.12vw,1rem)/1.5 'DM Sans',Arial,sans-serif;
+}
+.page-carta .carta-especiales-opciones li::before {
+  content:"";
+  position:absolute;
+  left:0;
+  top:.62em;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#90172b;
+}
+.page-carta .carta-especiales-precio {
+  display:inline-block;
+  max-width:100%;
+  margin:0 0 24px;
+  padding:12px 17px;
+  background:#fffdfa;
+  border:1px dashed #cf966b;
+  border-radius:12px;
+  color:#86817e;
+  font:400 .98rem/1.5 'DM Sans',Arial,sans-serif;
+}
+.page-carta .carta-especiales-precio strong { color:#90172b; font-weight:700; }
+.page-carta .carta-especiales-acciones {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:12px;
+}
+.page-carta .carta-especiales-acciones .btn {
+  border-radius:999px;
+  padding:14px 23px;
+  font:700 .74rem/1.3 'DM Sans',Arial,sans-serif;
+  letter-spacing:.16em;
+  text-align:center;
+  text-transform:uppercase;
+}
+.page-carta .carta-especiales-whatsapp { background:#30482a; color:#fff; border:1px solid #30482a; }
+.page-carta .carta-especiales-whatsapp:hover,
+.page-carta .carta-especiales-whatsapp:focus-visible { background:#253920; color:#fff; }
+.page-carta .carta-especiales-formulario { background:transparent; border:1px solid #bf754a !important; color:#90172b; }
+.page-carta .carta-especiales-formulario:hover,
+.page-carta .carta-especiales-formulario:focus-visible { background:#fffaf3; color:#90172b; }
+@media (max-width:950px) {
+  .page-carta .carta-especiales { padding:58px 0 70px; }
+  .page-carta .carta-especiales-grid { grid-template-columns:1fr; gap:42px; }
+  .page-carta .carta-especiales-collage { max-width:650px; margin-inline:auto; width:100%; }
+  .page-carta .carta-especiales-copy { max-width:700px; margin-inline:auto; width:100%; }
+}
+@media (max-width:560px) {
+  .page-carta .carta-especiales { padding:42px 0 56px; }
+  .page-carta .carta-especiales-fotos { gap:10px; }
+  .page-carta .carta-especiales-fotos img { border-radius:15px; }
+  .page-carta .carta-especiales-fotos img:nth-child(2) { margin-top:21px; }
+  .page-carta .carta-especiales-collage figcaption { font-size:.75rem; }
+  .page-carta .carta-especiales-copy h2 { font-size:clamp(2.25rem,10vw,3rem); }
+  .page-carta .carta-especiales-intro { font-size:.96rem; }
+  .page-carta .carta-especiales-opciones { gap:11px; }
+  .page-carta .carta-especiales-ginger { width:73px; }
+  .page-carta .carta-especiales-opciones li { padding-left:18px; font-size:.85rem; }
+  .page-carta .carta-especiales-opciones li::before { width:7px; height:7px; }
+  .page-carta .carta-especiales-acciones { display:grid; grid-template-columns:1fr; }
+  .page-carta .carta-especiales-acciones .btn { width:100%; letter-spacing:.11em; }
+}
+
+/* =====================================================================
+   INTEGRACIÓN (Daniela González)
+   - Pestañas de La Carta del mismo tamaño: en computador las seis
+     ocupan columnas iguales; en celular se deslizan con el mismo ancho.
+   - Preparaciones especiales sin la imagen de Ginger: la lista queda
+     alineada con el texto.
+   ===================================================================== */
+.page-carta .carta-nav-scroll { overflow-x:visible; }
+.page-carta .assan-menu-tabs { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); min-width:0; }
+.page-carta .assan-menu-tab { min-width:0; width:100%; min-height:118px; text-align:center; }
+.page-carta .carta-especiales-opciones { display:block; }
+@media (max-width:991px) {
+  .page-carta .carta-nav-scroll { overflow-x:auto; }
+  .page-carta .assan-menu-tabs { grid-template-columns:repeat(6,140px); min-width:max-content; }
+}
+@media (max-width:730px) {
+  .page-carta .assan-menu-tabs { grid-template-columns:repeat(6,126px); }
+  .page-carta .assan-menu-tab { min-height:108px; }
+}
+/* Integración: misma tipografía, tamaños y botones que el resto del sitio
+   (las reglas de arriba nombraban las fuentes directamente; sin internet se veía Georgia/Arial). */
+.page-carta .carta-especiales-copy h2,
+.page-carta .carta-category-heading h2,
+.page-carta .carta-subgroup h3 { font-family:var(--serif); font-weight:700; }
+.page-carta .carta-especiales-intro { color:var(--cafe); font-family:var(--sans); }
+.page-carta .carta-especiales-opciones li,
+.page-carta .carta-especiales-precio,
+.page-carta .assan-menu-tab,
+.page-carta .assan-menu-panel .menu-item-name,
+.page-carta .assan-menu-panel .menu-item-desc,
+.page-carta .assan-menu-panel .menu-item-price { font-family:var(--sans); }
+.page-carta .carta-especiales-acciones .btn { text-transform:none; letter-spacing:0; font-family:var(--sans); font-size:.95rem; padding:12px 24px; }
+@media (max-width:730px) {
+  .page-carta .carta-especiales-opciones li { font-size:.95rem; }
+  .page-carta .carta-especiales-acciones .btn { width:100%; }
+}
+@media (max-width:730px) {
+  .page-carta .assan-menu-tab { font-size:.82rem; padding:12px 10px; }
+}

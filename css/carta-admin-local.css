@@ -1,0 +1,43 @@
+/* Administrador de La Carta · demostración local con localStorage. */
+.page-carta .carta-admin-entry { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.page-carta .carta-admin-entry:hover { color:#f3cf96; }
+.ginger-admin-overlay[hidden], .ginger-admin-overlay [hidden] { display:none !important; }
+.ginger-admin-overlay { position:fixed; inset:0; z-index:99999; overflow-y:auto; overscroll-behavior:contain; background:rgba(31,20,14,.78); padding:clamp(12px,3vw,34px); display:flex; justify-content:center; align-items:flex-start; }
+.ginger-admin-card { width:min(100%,940px); margin:auto 0; background:#fff9f0; color:#472c1e; border-radius:22px; box-shadow:0 22px 80px rgba(0,0,0,.36); padding:clamp(20px,4vw,36px); font:400 15px/1.45 'DM Sans',Arial,sans-serif; }
+.ginger-admin-top { display:flex; justify-content:space-between; align-items:start; gap:15px; padding-bottom:18px; border-bottom:1px solid #e8d5bc; margin-bottom:20px; }
+.ginger-admin-top p { color:#9a5c39; letter-spacing:.11em; font-size:11px; font-weight:700; text-transform:uppercase; margin:0 0 7px; }
+.ginger-admin-top h2 { margin:0; color:#482109; font:600 clamp(24px,3vw,33px)/1.2 'Playfair Display',Georgia,serif; }
+.ginger-admin-btn { appearance:none; border:1px solid transparent; display:inline-flex; align-items:center; justify-content:center; gap:5px; padding:10px 15px; border-radius:10px; font:700 14px/1.3 'DM Sans',Arial,sans-serif; cursor:pointer; transition:background-color .14s; text-align:center; }
+.ginger-admin-btn:focus-visible, .ginger-admin-input:focus-visible, .ginger-admin-select:focus-visible, .ginger-admin-textarea:focus-visible { outline:3px solid #295239; outline-offset:2px; }
+.ginger-admin-btn.primary { background:#923244; color:#fff; }
+.ginger-admin-btn.primary:hover { background:#701f32; }
+.ginger-admin-btn.light { background:#fff; color:#472c1e; border-color:#dcc6ac; }
+.ginger-admin-btn.light:hover { background:#f8e9d7; }
+.ginger-admin-btn.danger { background:#fff0ee; color:#981d25; border-color:#dcbdb8; }
+.ginger-admin-btn.danger:hover { background:#f7d8d5; }
+.ginger-admin-btn:disabled { opacity:.5; cursor:not-allowed; }
+.ginger-admin-close { flex:0 0 auto; }
+.ginger-admin-muted { font-size:13px; color:#706056; margin:0 0 16px; }
+.ginger-admin-login { max-width:390px; margin:10px auto 8px; }
+.ginger-admin-label { display:block; font:700 13px/1.5 'DM Sans',Arial,sans-serif; margin-bottom:5px; }
+.ginger-admin-input,.ginger-admin-select,.ginger-admin-textarea { display:block; width:100%; border-radius:10px; border:1px solid #d7bda3; background:#fff; color:#422812; padding:11px 12px; font:400 15px/1.4 'DM Sans',Arial,sans-serif; box-sizing:border-box; }
+.ginger-admin-textarea { resize:vertical; min-height:78px; }
+.ginger-admin-field { margin:0 0 14px; }
+.ginger-admin-message { min-height:21px; margin:11px 0 0; font:600 13px/1.45 'DM Sans',Arial,sans-serif; }
+.ginger-admin-message.error { color:#a1222c; }
+.ginger-admin-message.ok { color:#25613d; }
+.ginger-admin-toolbar { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin:0 0 16px; }
+.ginger-admin-toolbar .ginger-admin-input { width:min(100%,320px); }
+.ginger-admin-list { display:grid; gap:9px; max-height:420px; overflow:auto; padding:1px 3px 3px 1px; margin-bottom:16px; }
+.ginger-admin-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:13px; border:1px solid #ead6bf; border-radius:12px; background:#fff; }
+.ginger-admin-row strong { display:block; font-size:14px; line-height:1.35; overflow-wrap:anywhere; }
+.ginger-admin-row small { display:block; font-size:12px; color:#736252; margin-top:4px; }
+.ginger-admin-form { border:1px solid #d7b792; border-radius:14px; background:#fff1dd; padding:clamp(15px,3vw,22px); margin-top:14px; }
+.ginger-admin-form h3 { margin:0 0 16px; font:600 22px/1.3 'Playfair Display',Georgia,serif; color:#472c1e; }
+.ginger-admin-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px 17px; }
+.ginger-admin-span { grid-column:1 / -1; }
+.ginger-admin-actions { display:flex; gap:9px; flex-wrap:wrap; }
+.ginger-admin-legal { border-top:1px solid #e8d5bc; padding-top:15px; margin:17px 0 0; font-size:12px; color:#706056; }
+body.ginger-admin-open { overflow:hidden; }
+@media(max-width:620px) { .ginger-admin-fields { grid-template-columns:1fr; } .ginger-admin-row { align-items:start; } .ginger-admin-top h2 { font-size:23px; } .ginger-admin-btn { padding:9px 11px; } .ginger-admin-toolbar .ginger-admin-input { width:100%; } }
+@media(prefers-reduced-motion:reduce) { .ginger-admin-btn { transition:none; } }

@@ -1,0 +1,52 @@
+/* Adaptación conservadora de la plantilla Assan Restaurant a la EV2 original. */
+/* Se conserva el contenido, colores, tipografía, ilustraciones y sistema de libro de la EV2. */
+.assan-header.site-header { position:relative; z-index:25; background:#fff8ed; border-bottom:1px solid #e9d5c2; box-shadow:0 4px 14px rgba(57,31,20,.05); }
+.assan-navbar.navbar { min-height:94px; padding:9px 0; }
+.assan-navbar .container { display:flex; align-items:center; justify-content:space-between; gap:18px; width:min(var(--ancho,1200px),calc(100% - 64px)); max-width:none; margin:0 auto; }
+.assan-brand.navbar-brand { display:flex; flex-shrink:0; gap:12px; align-items:center; padding:0; margin:0; text-decoration:none; white-space:normal; }
+.assan-brand-logo { display:block; width:69px; height:69px; object-fit:contain; }
+.assan-brand-copy strong { display:block; font:700 1.55rem/.97 'Playfair Display',Georgia,serif; color:var(--vino,#92172a); }
+.assan-brand-copy small { display:block; font-size:.51rem; letter-spacing:.16em; font-weight:700; margin-top:7px; color:var(--cafe,#462b20); }
+.assan-links.navbar-nav { display:flex; flex-flow:row wrap; align-items:center; justify-content:flex-end; gap:clamp(10px,1.5vw,22px); padding:0; margin:0 0 0 auto; }
+.assan-links .nav-item { list-style:none; margin:0; }
+.assan-links .nav-link:not(.assan-order) { display:block; font:500 .85rem/1.4 'DM Sans',Arial,sans-serif; color:var(--cafe,#462b20); padding:10px 0; border:0; text-decoration:none; }
+.assan-links .nav-link:not(.assan-order):hover,.assan-links .nav-link.active:not(.assan-order) { color:var(--vino,#92172a); }
+.assan-links .nav-link.active:not(.assan-order) { box-shadow:inset 0 -2px var(--vino,#92172a); }
+.assan-links .assan-order.btn { background:var(--vino,#92172a); color:#fff; padding:10px 17px; border-radius:40px; font-size:.82rem; line-height:1.4; text-decoration:none; font-weight:700; }
+.assan-toggle.navbar-toggler { display:none; border:1px solid #c7a185; padding:8px 12px; border-radius:9px; background:#fff8ed; color:var(--vino,#92172a); }
+.assan-toggle.navbar-toggler:focus-visible,.assan-links a:focus-visible { outline:3px solid #b4774d; outline-offset:3px; }
+.assan-footer { border-top:2px solid #ead6bd; }
+/* Preserve page content widths & margins from the EV2 instead of forcing generic template wrappers. */
+.assan-page-main .container { max-width:none; }
+/* The Assan template menu card hook reuses EV2's eight category tabs and original data. */
+.assan-food-menu-card { position:relative; }
+.assan-tabs-menu-nav { position:relative; }
+/* The EV2 book uses --k to layer 13 flip pages; keep the exact same sequence without inline styles. */
+.page-ginger .flip-leaf.leaf-0 { --k:0; }
+.page-ginger .flip-leaf.leaf-1 { --k:1; }
+.page-ginger .flip-leaf.leaf-2 { --k:2; }
+.page-ginger .flip-leaf.leaf-3 { --k:3; }
+.page-ginger .flip-leaf.leaf-4 { --k:4; }
+.page-ginger .flip-leaf.leaf-5 { --k:5; }
+.page-ginger .flip-leaf.leaf-6 { --k:6; }
+.page-ginger .flip-leaf.leaf-7 { --k:7; }
+.page-ginger .flip-leaf.leaf-8 { --k:8; }
+.page-ginger .flip-leaf.leaf-9 { --k:9; }
+.page-ginger .flip-leaf.leaf-10 { --k:10; }
+.page-ginger .flip-leaf.leaf-11 { --k:11; }
+.page-ginger .flip-leaf.leaf-12 { --k:12; }
+@media(max-width:1050px) {
+  .assan-navbar .container { width:calc(100% - 34px); flex-wrap:wrap; }
+  .assan-toggle.navbar-toggler { display:inline-flex; align-items:center; justify-content:center; margin-left:auto; }
+  .assan-navbar .assan-collapse.navbar-collapse { display:none; flex-basis:100%; width:100%; }
+  .assan-navbar .assan-collapse.navbar-collapse.is-open { display:block; }
+  .assan-links.navbar-nav { display:flex; flex-flow:column nowrap; align-items:stretch; justify-content:flex-start; gap:2px; margin:0; padding:5px 0 12px; }
+  .assan-links .nav-link:not(.assan-order) { padding:10px 11px; }
+  .assan-links .nav-link.active:not(.assan-order) { background:#f5e7d7; border-radius:8px; box-shadow:none; }
+  .assan-links .assan-order.btn { display:inline-flex; margin-top:5px; justify-content:center; }
+}
+@media(max-width:580px) {
+  .assan-brand-logo { width:57px;height:57px; }
+  .assan-brand-copy strong { font-size:1.3rem; }
+  .assan-navbar.navbar { min-height:75px; }
+}
