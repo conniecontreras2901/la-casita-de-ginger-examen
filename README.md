@@ -4,7 +4,7 @@ Sitio web para **La Casita de Ginger**, una pastelería y cafetería artesanal u
 
 El sitio presenta la identidad de la marca, sus tortas, su carta, la historia de Ginger, la galletita protagonista, y permite preparar pedidos que se envían por WhatsApp.
 
-**Sitio publicado:** Pendiente de publicación en Netlify.
+**Sitio publicado:** [La Casita de Ginger](https://lacasitadeginger.netlify.app/)
 
 ![Página de inicio](capturas/inicio.png)
 
@@ -98,8 +98,13 @@ El sitio se adapta a computador, tablet y celular. En pantallas pequeñas el men
 
 ## Cómo ver el proyecto
 
-- En línea: pendiente de publicación en Netlify.
-- En el computador: descargar el repositorio y abrir `index.html` en el navegador. No necesita servidor.
+- En línea: https://lacasitadeginger.netlify.app/
+- En el computador: descargar el repositorio y abrir
+  `index.html` en el navegador.
+- El sitio se encuentra publicado en Netlify y conectado
+  a la rama `main` del repositorio de GitHub, permitiendo
+  su actualización automática al incorporar nuevos cambios.
+- No requiere servidor propio ni comandos de compilación.
 
 ## Integrantes y aporte individual
 
@@ -109,13 +114,20 @@ El sitio se adapta a computador, tablet y celular. En pantallas pequeñas el men
 Base del sitio y conexión del template sin perder la identidad visual, diseño (paleta de colores, tipografías y estilo de las secciones), Inicio, menú, `js/general.js`, integración de las partes del grupo, guion y edición del video y armado de la entrega.
 
 ### Jorge Aravena
-Páginas La Carta y Conoce a Ginger: carta con pestañas del template (`js/carta.js`), preparaciones especiales, libro con la historia de Ginger, administradores locales de La Carta y de Tortas, menú para celular (`js/assan-nav.js`) y publicación en Netlify.
+
+Desarrollo y adaptación de las páginas La Carta y Conoce a Ginger al template seleccionado, reorganizando los productos e incorporando pestañas interactivas mediante JavaScript y los eventos `click` y `keydown`. Integración del cuento completo de Ginger, conservando sus ilustraciones originales y animaciones de cambio de página.
+
+Implementación de los administradores locales de La Carta y Tortas, permitiendo agregar, editar y eliminar productos mediante JavaScript y `localStorage`, además del menú de navegación para dispositivos móviles.
+
+Para el examen final, se realizó la publicación del sitio en Netlify, vinculándolo con GitHub para permitir su actualización automática, configurando la URL definitiva, verificando su funcionamiento y elaborando el archivo de enlaces para la entrega.
 
 ### Jorge Medina
 Secciones Todas nuestras tortas, Torta personalizada y Experiencias: tarjetas del template, filtro por categoría (`js/tortas.js`), reseñas reales de Google Maps, pruebas del sitio publicado y capturas.
 
 ### Constanza Contreras
-Página Haz tu pedido y pie de página: formulario adaptado del template, validación y envío por WhatsApp (`js/pedido.js`), repositorio de GitHub y este README.
+Me encargué de la adaptación inicial de la página Haz tu pedido y del pie de página al template, conservando la identidad visual del emprendimiento. Implementé la validación del formulario con los eventos blur y submit, los mensajes de error, la actualización del resumen con change y la preselección de la torta recibida desde Inicio. También preparé el mensaje de consulta para continuar en WhatsApp.
+
+Para el examen creé el repositorio público de GitHub, envié las invitaciones a mis compañeros y cargué los archivos del sitio y el README. Participé en las pruebas de mi sección en computador, tablet y celular.
 
 ---
 
