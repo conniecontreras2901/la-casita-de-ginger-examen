@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="La Casita de Ginger: pastelería artesanal de Chillán, con magia navideña todo el año." name="description"/>
+<title>La Carta | La Casita de Ginger</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&amp;display=swap" rel="stylesheet"/>
+<!-- HOJAS DE ESTILO: base.css e inicio.css (Daniela González) · ginger.css, carta.css y administrador (Jorge Aravena) · tortas.css (Jorge Medina) · footer.css (Constanza Contreras) -->
+<!-- ESTILOS DEL TEMPLATE (Assan, Bootstrap 4) · template.css los importa como capa base.
+     Nuestros estilos siempre ganan sobre el template, así se mantiene el diseño de La Casita de Ginger. -->
+<link href="css/template.css" rel="stylesheet"/>
+<!-- NUESTROS ESTILOS -->
+<link href="css/base.css" rel="stylesheet"/>
+<link href="css/ginger.css" rel="stylesheet"/><link href="css/tortas.css" rel="stylesheet"/>
+<!-- inicio.css va después de ginger.css y tortas.css para que el diseño del Inicio se mantenga (Ev. 3) -->
+<link href="css/inicio.css" rel="stylesheet"/>
+
+<!-- Pie de página común (Constanza Contreras) -->
+<link href="css/footer.css" rel="stylesheet"/>
+<!-- ESTILOS DE JORGE ARAVENA (Ev. 3): adaptación Assan, La Carta y administrador local -->
+<link href="css/assan-adaptacion.css" rel="stylesheet"/>
+<link href="css/carta.css" rel="stylesheet"/>
+<link href="css/carta-admin-local.css" rel="stylesheet"/>
+
+</head>
+<body class="page-carta">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<!-- ===== ENCABEZADO Y NAVEGACIÓN COMPARTIDOS · Daniela González ===== -->
+<!-- ·····································································
+     EVALUACIÓN 3 · HECHO POR: DANIELA GONZÁLEZ
+     Menú y encabezado compartidos por todas las páginas. Diseño de la Ev. 2 sin cambios.
+     Si alguien necesita cambiar el menú, avisa a Daniela para cambiarlo en las 4 páginas.
+     (Comentario del código; no se ve en la página.)
+     ····································································· -->
+<header class="site-header" id="arriba">
+<div class="container nav-wrap">
+<a aria-label="Volver al inicio de La Casita de Ginger" class="brand" href="index.html">
+<img alt="Logo oficial de La Casita de Ginger" class="brand-logo" loading="eager" src="img/optimizado/logo.webp"/>
+<span class="brand-copy"><strong>La Casita<br/>de Ginger</strong><small>PASTELERÍA ARTESANAL</small></span>
+</a>
+<!-- Integración (Daniela González): botón de menú para celular de Jorge Aravena (js/assan-nav.js).
+     El menú es el mismo; en pantallas pequeñas se abre y se cierra con este botón. -->
+<button aria-controls="navbarRestaurant" aria-expanded="false" aria-label="Mostrar menú de navegación" class="menu-toggle" data-assan-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Navegación principal" class="main-nav" id="navbarRestaurant">
+<a class="" href="index.html">Inicio</a>
+<a href="index.html#tortas">Tortas</a><a class="" href="ginger.html">Ginger</a>
+<a class="is-active" href="carta.html">La Carta</a>
+<a href="index.html#nosotros">Nosotros</a>
+<a href="index.html#visitanos">Contacto</a>
+<a class="btn btn-small btn-primary" href="pedido.html">♧ Haz tu pedido</a>
+</nav>
+</div>
+</header>
+<main class="assan-page-main" id="contenido">
+<!-- ===================================================================
+     LA CARTA · JORGE ARAVENA (Evaluación 3)
+     Encabezado, carta con pestañas del template Assan (js/carta.js)
+     y Preparaciones especiales. Integrado por Daniela González sin cambios.
+     =================================================================== -->
+<!-- ===== LA CARTA · Página y encabezado: Daniela González ===== -->
+<section class="carta-hero assan-section">
+<div class="container carta-hero-grid">
+<div class="carta-hero-copy">
+<p class="eyebrow">— DULCES Y PREPARACIONES DE NUESTRA CASITA —</p>
+<h1>Descubre<br/><em>La Carta</em></h1>
+<p>Desayunos, brunch, dulces, cafetería y bebidas para disfrutar en nuestra casita. Elige una categoría para conocer sus productos.</p>
+<p class="carta-local-nota">Esta carta es para cuando nos visites en La Casita. Si quieres encargar una torta, hazlo desde <a href="pedido.html">Haz tu pedido</a>.</p>
+<a class="btn btn-primary" href="#carta-completa">Ver categorías ↓</a>
+</div>
+<img alt="Ginger feliz con un corazón, imagen principal de La Carta" class="carta-hero-photo" loading="eager" src="img/optimizado/ginger-corazon-feliz.webp"/>
+</div>
+</section>
+<!-- ===== LA CARTA · Contenido y tortas.css: Jorge Medina · Menú por pestañas: Daniela González ===== -->
+<section class="carta-section section-anchor assan-section" id="carta-completa">
+<div class="container">
+<div class="assan-menu-organized" id="menu-ginger"><div aria-label="Categorías de La Carta" class="carta-nav-scroll"><div aria-label="Categorías" class="nav nav-pills assan-menu-tabs" id="carta-tablist" role="tablist"><button aria-controls="panel-desayunos" aria-selected="true" class="nav-link assan-menu-tab active" id="tab-desayunos" role="tab" tabindex="0" type="button"><img alt="" loading="lazy" src="img/optimizado/icono-comenzar.webp"/><span>Desayunos</span></button><button aria-controls="panel-brunch" aria-selected="false" class="nav-link assan-menu-tab" id="tab-brunch" role="tab" tabindex="-1" type="button"><img alt="" loading="lazy" src="img/optimizado/icono-continuar.webp"/><span>Brunch</span></button><button aria-controls="panel-dulces" aria-selected="false" class="nav-link assan-menu-tab" id="tab-dulces" role="tab" tabindex="-1" type="button"><img alt="" loading="lazy" src="img/optimizado/icono-dulces.webp"/><span>Algo rico para endulzar tu día</span></button><button aria-controls="panel-cafeteria" aria-selected="false" class="nav-link assan-menu-tab" id="tab-cafeteria" role="tab" tabindex="-1" type="button"><img alt="" loading="lazy" src="img/optimizado/icono-desayunos.webp"/><span>Cafetería</span></button><button aria-controls="panel-bebidas" aria-selected="false" class="nav-link assan-menu-tab" id="tab-bebidas" role="tab" tabindex="-1" type="button"><img alt="" loading="lazy" src="img/optimizado/icono-bebidas.webp"/><span>Bebidas</span></button><button aria-controls="panel-extras" aria-selected="false" class="nav-link assan-menu-tab" id="tab-extras" role="tab" tabindex="-1" type="button"><img alt="" loading="lazy" src="img/optimizado/icono-extras.webp"/><span>Extras</span></button></div></div><div class="tab-content assan-menu-content" id="carta-panels"><section aria-labelledby="tab-desayunos" class="tab-pane assan-menu-panel active show" id="panel-desayunos" role="tabpanel" tabindex="0"><header class="carta-category-heading"><p class="eyebrow">— LA CASITA DE GINGER —</p><h2>Desayunos</h2></header><div class="menu-lines"><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Desayuno u once «La Casita»</h4><p class="menu-item-desc">Huevos revueltos con pancito, té o café americano, un alfajor con dulce de leche y un vaso de jugo natural.</p></div><span class="menu-item-price">$8.200</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Desayuno u once de «Ginger»</h4><p class="menu-item-desc">Té o café americano, trozo de torta, kuchen o pie, medio especial ciabatta y vaso de jugo natural.</p></div><span class="menu-item-price">$9.400</span></article></div></section><section aria-labelledby="tab-brunch" class="tab-pane assan-menu-panel" hidden="" id="panel-brunch" role="tabpanel" tabindex="0"><header class="carta-category-heading"><p class="eyebrow">— LA CASITA DE GINGER —</p><h2>Brunch</h2></header><div class="menu-lines"><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Huevos revueltos (3 un.) y pancito de «doña gallina»</h4></div><span class="menu-item-price">$2.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Huevos revueltos (3 un.), tomate, orégano y pancito «el trineo rojo»</h4></div><span class="menu-item-price">$3.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Huevos revueltos (3 un.), jamón o queso y pancito «cerdito glotón»</h4></div><span class="menu-item-price">$3.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Selladitos jamón y queso «no me atraparás»</h4></div><span class="menu-item-price">$2.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Tostadas con mantequilla de la vaca lola</h4></div><span class="menu-item-price">$1.800</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Tostadas con mermelada del bosque</h4></div><span class="menu-item-price">$1.800</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Tostadas con queso y jamón</h4></div><span class="menu-item-price">$2.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Ciabatta bocado del bosque</h4><p class="menu-item-desc">Jamón, queso, lechuga, tomate y mayonesa en pan ciabatta de masa madre.</p></div><span class="menu-item-price">$4.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Ciabatta corre que te como</h4><p class="menu-item-desc">Jamón, queso, tomate, cebolla caramelizada y pimentón en pan ciabatta de masa madre.</p></div><span class="menu-item-price">$5.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Sopaipillas, amor a primer mordisco</h4><p class="menu-item-desc">Consultar disponibilidad.</p></div><span class="menu-item-price">$350 c/u</span></article></div></section><section aria-labelledby="tab-dulces" class="tab-pane assan-menu-panel" hidden="" id="panel-dulces" role="tabpanel" tabindex="0"><header class="carta-category-heading"><p class="eyebrow">— LA CASITA DE GINGER —</p><h2>Algo rico para endulzar tu día</h2></header><div class="menu-lines"><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Trozo de torta</h4><p class="menu-item-desc">Producto elaborado en casa</p></div><span class="menu-item-price">Desde $3.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Trozo de kuchen</h4><p class="menu-item-desc">Producto elaborado en casa</p></div><span class="menu-item-price">Desde $3.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Trozo de pie</h4><p class="menu-item-desc">Producto elaborado en casa</p></div><span class="menu-item-price">Desde $3.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Muffin</h4></div><span class="menu-item-price">$1.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Muffin variedades</h4><p class="menu-item-desc">Consultar disponibilidad</p></div><span class="menu-item-price menu-consultar">Consultar</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Calzones rotos de Santa</h4><p class="menu-item-desc">Consultar disponibilidad.</p></div><span class="menu-item-price">$400 c/u</span></article></div></section><section aria-labelledby="tab-cafeteria" class="tab-pane assan-menu-panel" hidden="" id="panel-cafeteria" role="tabpanel" tabindex="0"><header class="carta-category-heading"><p class="eyebrow">— LA CASITA DE GINGER —</p><h2>Cafetería</h2></header><div class="carta-subgroup"><h3>Café de especialidad</h3><div class="menu-lines"><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Espresso del polo norte (simple)</h4></div><span class="menu-item-price">$2.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Espresso doble del polo norte</h4></div><span class="menu-item-price">$3.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Americano fugitivo</h4></div><span class="menu-item-price">$3.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Café con leche muuu (cortado)</h4></div><span class="menu-item-price">$3.200</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Capuccino simple copo de nieve</h4><p class="menu-item-desc">Una carga de espresso con leche texturizada y espuma de leche.</p></div><span class="menu-item-price">$3.200</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Capuccino copito de vainilla</h4><p class="menu-item-desc">Una carga de espresso con leche texturizada, vainilla y espuma de leche.</p></div><span class="menu-item-price">$3.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Capuccino vienes gorro de Santa</h4><p class="menu-item-desc">Espresso doble, crema chantilly y mostacilla de chocolate.</p></div><span class="menu-item-price">$4.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Café bom-bom encantado</h4><p class="menu-item-desc">Leche condensada, espresso doble y espuma de leche.</p></div><span class="menu-item-price">$4.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Latte del duende</h4><p class="menu-item-desc">Carga simple de espresso con leche texturizada.</p></div><span class="menu-item-price">$3.200</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Latte vainilla</h4><p class="menu-item-desc">Carga simple de espresso, vainilla, con leche texturizada.</p></div><span class="menu-item-price">$3.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Latte avellana del zorro astuto</h4><p class="menu-item-desc">Carga simple de espresso, esencia de avellana, con leche texturizada.</p></div><span class="menu-item-price">$4.000</span></article></div></div><div class="carta-subgroup"><h3>Chocolate</h3><div class="menu-lines"><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Chocolate caliente de la abuelita Nora</h4><p class="menu-item-desc">Leche, chocolate dulce, vainilla, canela, nuez moscada y clavo de olor.</p></div><span class="menu-item-price">$4.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Chocolate caliente con malvaviscos</h4></div><span class="menu-item-price">$4.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Café moka</h4><p class="menu-item-desc">Carga simple de espresso con leche texturizada, con notas de chocolate</p></div><span class="menu-item-price">$3.500</span></article></div></div><div class="carta-subgroup"><h3>Té</h3><div class="menu-lines"><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Té Twining</h4></div><span class="menu-item-price">$2.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Tetera de té de hierbas</h4><p class="menu-item-desc">En la carta anterior figura como «Teteritas con té de hojas».</p></div><span class="menu-item-price">$4.300</span></article></div></div><div class="carta-subgroup"><h3>ICE · Preparaciones frías</h3><div class="menu-lines"><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Café / chocolate helado</h4></div><span class="menu-item-price">$4.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Milkshake</h4></div><span class="menu-item-price">$4.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Blue</h4><p class="menu-item-desc">Brebaje a base de leche de arroz, leche de coco y frutas tropicales.</p></div><span class="menu-item-price">$5.200</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Smoothie</h4></div><span class="menu-item-price">$4.000</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Jugos naturales</h4></div><span class="menu-item-price">$3.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Granizados</h4></div><span class="menu-item-price">$3.600</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Jugos y batidos 100% fruta natural</h4></div><span class="menu-item-price menu-consultar">Consultar</span></article></div></div></section><section aria-labelledby="tab-bebidas" class="tab-pane assan-menu-panel" hidden="" id="panel-bebidas" role="tabpanel" tabindex="0"><header class="carta-category-heading"><p class="eyebrow">— LA CASITA DE GINGER —</p><h2>Bebidas</h2></header><div class="menu-lines"><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Agua mineral</h4></div><span class="menu-item-price">$1.500</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Bebida 350 cc</h4><p class="menu-item-desc">Consultar variedades</p></div><span class="menu-item-price">$2.000</span></article></div></section><section aria-labelledby="tab-extras" class="tab-pane assan-menu-panel" hidden="" id="panel-extras" role="tabpanel" tabindex="0"><header class="carta-category-heading"><p class="eyebrow">— LA CASITA DE GINGER —</p><h2>Extras</h2></header><div class="menu-lines"><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Extra mantequilla</h4></div><span class="menu-item-price">$600</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Extra mermelada</h4></div><span class="menu-item-price">$800</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Extra tostadas</h4></div><span class="menu-item-price">$800</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Extra crema</h4></div><span class="menu-item-price">$900</span></article><article class="menu-item"><div class="menu-item-details"><h4 class="menu-item-name">Extra leche</h4></div><span class="menu-item-price">$900</span></article></div></section></div></div>
+</div></section>
+
+<!-- ===== PREPARACIONES ESPECIALES · Bajo La Carta, antes del pie de página ===== -->
+<section class="carta-especiales section-anchor assan-section" id="preparaciones-especiales" aria-labelledby="carta-especiales-titulo">
+  <div class="container carta-especiales-grid">
+    <figure class="carta-especiales-collage">
+      <div class="carta-especiales-fotos">
+        <img src="img/optimizado/carta-desayuno-sorpresa.webp" alt="Desayuno sorpresa con jugo, croissant, fruta y galletas decoradas de Ginger" width="308" height="462" loading="lazy"/>
+        <img src="img/optimizado/carta-preparaciones-para-compartir.webp" alt="Mesa con preparaciones dulces y saladas, bocados y bebidas para una celebración" width="302" height="411" loading="lazy"/>
+      </div>
+      <!-- Integración (Daniela González): se quitó el texto bajo las fotos, igual que en Torta personalizada. -->
+    </figure>
+    <div class="carta-especiales-copy">
+      <p class="eyebrow">— HECHO A TU MEDIDA —</p>
+      <h2 id="carta-especiales-titulo">Preparaciones <em>especiales</em></h2>
+      <p class="carta-especiales-intro">¿Buscas algo especial para tu celebración? En La Casita de Ginger también preparamos pedidos personalizados para sorprender, compartir y celebrar a tu manera.</p>
+      <div class="carta-especiales-opciones">
+        <!-- Integración (Daniela González): se quitó la imagen de Ginger guiñando para dejar la sección más limpia. -->
+        <ul>
+          <li>Desayunos sorpresa personalizados</li>
+          <li>Galletas glaseadas personalizadas</li>
+          <li>Onces a pedido</li>
+          <li>Coctelería</li>
+        </ul>
+      </div>
+      <p class="carta-especiales-precio">Detalles, valores y formatos: <strong>a conversar según tu pedido</strong></p>
+      <div class="carta-especiales-acciones">
+        <a class="btn carta-especiales-whatsapp" href="https://wa.me/56952281744?text=Hola%20Ginger%2C%20quisiera%20cotizar%20una%20preparaci%C3%B3n%20especial." target="_blank" rel="noopener noreferrer">Cotiza con Ginger por WhatsApp</a>
+        <a class="btn carta-especiales-formulario" href="pedido.html">Ir al formulario</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<!-- ===== PIE DE PÁGINA · Constanza Contreras (integrado en todas las páginas por Daniela González) ===== -->
+<!-- CONSTANZA EV3:
+         Footer adaptado de classic-onepage-restaurant.html.
+         Daniela integrará este bloque en las demás páginas. -->
+
+    <footer class="footer site-footer footer-ginger" id="contacto">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <a class="footer-brand" href="index.html">
+                        <img class="footer-logo"
+                             src="img/optimizado/logo.webp"
+                             alt="">
+
+                        <span>
+                            La Casita<br>
+                            <strong>de Ginger</strong>
+                        </span>
+                    </a>
+
+                    <h2 class="footer-heading">Ven a visitarnos</h2>
+
+                    <address>
+                        Yungay 95, esquina Iquique<br>
+                        Chillán, Región de Ñuble, Chile.
+                    </address>
+
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Yungay%2095%2C%20Chill%C3%A1n%2C%20Chile"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Ver ubicación en Google Maps
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <h2 class="footer-heading">Horarios de atención</h2>
+
+                    <ul class="list-unstyled opening-time footer-horarios">
+                        <li>
+                            <span class="day">Lunes a sábado</span>
+                            <span class="time">09:30–20:30</span>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Consultas por WhatsApp y redes sociales:
+                        también fines de semana.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-12 footer-col">
+                    <h2 class="footer-heading">Redes y contacto</h2>
+
+                    <ul class="list-unstyled footer-contactos">
+                        <li>
+                            <a href="https://wa.me/56952281744"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                WhatsApp: +56 9 5228 1744
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/lacasitadeginger_/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Instagram: @lacasitadeginger_
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.tiktok.com/@lacasitadeginger"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                TikTok: @lacasitadeginger
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:Fabiola.Avendano@gmail.com">
+                                Fabiola.Avendano@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Integración (Daniela González): se quitó la línea del sitio académico para publicar la página.
+                 Queda solo el enlace al administrador local de Jorge Aravena, solo en La Carta. -->
+            <div class="footer-bottom">
+                <a class="carta-admin-entry" href="carta.html#administracion">Administración</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- ===== BOTÓN FLOTANTE DE WHATSAPP · Daniela González ===== -->
+<!-- ·····································································
+     EVALUACIÓN 3 · HECHO POR: DANIELA GONZÁLEZ
+     Botón de WhatsApp (siempre visible, como en la Ev. 2) y botón 'Volver arriba' (clase back-to-top del template).
+     js/general.js muestra 'Volver arriba' al bajar 400px (evento scroll) y sube suave al hacer click (evento click).
+     (Comentario del código; no se ve en la página.)
+     ····································································· -->
+<a class="wa-float" id="btn-whatsapp" href="https://wa.me/56952281744?text=Hola%20Ginger%2C%20quiero%20hacer%20un%20pedido." rel="noopener noreferrer" target="_blank" aria-label="Escríbele a Ginger por WhatsApp"><svg aria-hidden="true" viewBox="0 0 24 24" class="wa-icon"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Escríbele a Ginger</span></a>
+<a aria-label="Volver arriba" class="back-to-top" href="#arriba" id="btn-arriba"><i class="ti-angle-up"></i></a>
+
+<!-- ===== JORGE ARAVENA · Administrador local de La Carta (se abre desde «Administración» en el pie) ===== -->
+<!-- ===== ADMINISTRADOR LOCAL DE LA CARTA · DEMOSTRACIÓN SIN SERVIDOR ===== -->
+<section class="ginger-admin-overlay" id="ginger-admin-overlay" hidden aria-label="Administración local de La Carta">
+  <div class="ginger-admin-card" role="dialog" aria-modal="true" aria-labelledby="ginger-admin-heading">
+    <div class="ginger-admin-top">
+      <div><p>La Casita de Ginger</p><h2 id="ginger-admin-heading">Administración de La Carta</h2></div>
+      <button id="ginger-admin-close" class="ginger-admin-btn light ginger-admin-close" type="button" aria-label="Cerrar administrador">Cerrar ✕</button>
+    </div>
+    <div id="ginger-admin-login-view">
+      <form id="ginger-admin-login-form" class="ginger-admin-login">
+        <p class="ginger-admin-muted">Ingresa con las credenciales del administrador para modificar los productos de esta copia local.</p>
+        <div class="ginger-admin-field"><label class="ginger-admin-label" for="ginger-admin-username">Usuario</label><input id="ginger-admin-username" class="ginger-admin-input" type="text" autocomplete="username" required maxlength="80"/></div>
+        <div class="ginger-admin-field"><label class="ginger-admin-label" for="ginger-admin-password">Contraseña</label><input id="ginger-admin-password" class="ginger-admin-input" type="password" autocomplete="current-password" required maxlength="100"/></div>
+        <button class="ginger-admin-btn primary" type="submit">Ingresar</button>
+      </form>
+    </div>
+    <div id="ginger-admin-panel-view" hidden>
+      <div class="ginger-admin-toolbar">
+        <input class="ginger-admin-input" id="ginger-admin-search" type="search" placeholder="Buscar productos..." aria-label="Buscar productos"/>
+        <div class="ginger-admin-actions">
+          <button type="button" class="ginger-admin-btn primary" id="ginger-admin-add">+ Agregar producto</button>
+          <button type="button" class="ginger-admin-btn light" id="ginger-admin-signout">Cerrar sesión</button>
+        </div>
+      </div>
+      <p id="ginger-admin-count" class="ginger-admin-muted"></p>
+      <div id="ginger-admin-list" class="ginger-admin-list" aria-label="Listado de productos"></div>
+      <div id="ginger-admin-editor" class="ginger-admin-form" hidden>
+        <h3 id="ginger-admin-editor-title">Editar producto</h3>
+        <form id="ginger-admin-product-form">
+          <div class="ginger-admin-fields">
+            <div class="ginger-admin-field"><label class="ginger-admin-label" for="ginger-admin-product-title">Título o nombre *</label><input id="ginger-admin-product-title" class="ginger-admin-input" type="text" required maxlength="160"/></div>
+            <div class="ginger-admin-field"><label class="ginger-admin-label" for="ginger-admin-price">Precio *</label><input id="ginger-admin-price" class="ginger-admin-input" type="text" placeholder="Ej.: $1.800, Desde $3.500 o Consultar" required maxlength="100"/></div>
+            <div class="ginger-admin-field ginger-admin-span"><label class="ginger-admin-label" for="ginger-admin-description">Descripción (opcional)</label><textarea id="ginger-admin-description" class="ginger-admin-textarea" rows="2" maxlength="800"></textarea></div>
+            <div class="ginger-admin-field"><label class="ginger-admin-label" for="ginger-admin-category">Categoría</label><select id="ginger-admin-category" class="ginger-admin-select"></select></div>
+            <div class="ginger-admin-field" id="ginger-admin-subgroup-field" hidden><label class="ginger-admin-label" for="ginger-admin-subgroup">Grupo de Cafetería</label><select id="ginger-admin-subgroup" class="ginger-admin-select"></select></div>
+          </div>
+          <div class="ginger-admin-actions">
+            <button class="ginger-admin-btn primary" type="submit">Guardar cambios</button>
+            <button class="ginger-admin-btn light" id="ginger-admin-cancel" type="button">Cancelar</button>
+            <button class="ginger-admin-btn danger" id="ginger-admin-delete" type="button">Eliminar producto</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <p id="ginger-admin-status" class="ginger-admin-message" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- JavaScript del template: jQuery y Bootstrap. No se edita. -->
+<script src="js/plugins/plugins.js"></script>
+<!-- JavaScript general · Daniela González: botones flotantes y volver arriba -->
+<script src="js/general.js"></script>
+<!-- JavaScript de Jorge Aravena (Ev. 3): menú en celular, pestañas de La Carta y administrador local -->
+<script src="js/assan-nav.js"></script>
+<script src="js/carta.js"></script>
+<script src="js/carta-admin-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="La Casita de Ginger: pastelería artesanal de Chillán, con magia navideña todo el año.">
+
+    <title>Haz tu pedido | La Casita de Ginger</title>
+
+    <!-- DANIELA: recursos y estilos compartidos. -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&amp;display=swap"
+          rel="stylesheet">
+
+    <link href="css/template.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/pedido.css" rel="stylesheet">
+    <!-- Pie de página común (Constanza Contreras) -->
+    <link href="css/footer.css" rel="stylesheet">
+</head>
+
+<body class="page-pedido">
+
+    <!-- DANIELA: cabecera y navegación compartidas. -->
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" id="arriba">
+        <div class="container nav-wrap">
+            <a class="brand"
+               href="index.html"
+               aria-label="Volver al inicio de La Casita de Ginger">
+
+                <img class="brand-logo"
+                     src="img/optimizado/logo.webp"
+                     alt="Logo oficial de La Casita de Ginger"
+                     loading="eager">
+
+                <span class="brand-copy">
+                    <strong>La Casita<br>de Ginger</strong>
+                    <small>PASTELERÍA ARTESANAL</small>
+                </span>
+            </a>
+
+            <!-- Integración (Daniela González): botón de menú para celular de Jorge Aravena (js/assan-nav.js).
+                 El menú es el mismo; en pantallas pequeñas se abre y se cierra con este botón. -->
+            <button aria-controls="navbarRestaurant" aria-expanded="false" aria-label="Mostrar menú de navegación" class="menu-toggle" data-assan-toggle="" type="button"><span></span><span></span><span></span></button>
+            <nav class="main-nav" id="navbarRestaurant" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#tortas">Tortas</a>
+                <a href="ginger.html">Ginger</a>
+                <a href="carta.html">La Carta</a>
+                <a href="index.html#nosotros">Nosotros</a>
+                <a href="index.html#visitanos">Contacto</a>
+
+                <a class="btn btn-small btn-primary is-active"
+                   href="pedido.html"
+                   aria-current="page">
+                    ♧ Haz tu pedido
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <!-- CONSTANZA EV3: conservar imagen e identidad visual. -->
+        <section class="pedido-hero">
+            <div class="container pedido-hero-grid">
+                <div>
+                    <p class="eyebrow">— RESERVA ALGO DULCE —</p>
+                    <h1>Haz tu <em>pedido</em></h1>
+
+                    <p>
+                        Encarga una o varias tortas de forma fácil y rápida.
+                    </p>
+
+                    <p class="carta-local-nota">
+                        Los pedidos en línea son para tortas.
+                        La carta de cafetería se disfruta en nuestro local.
+                    </p>
+                </div>
+
+                <img class="pedido-hero-mascot pedido-hero-photo"
+                     src="img/optimizado/ginger-decorando-galletas.webp"
+                     alt="Ginger decorando galletas"
+                     loading="eager">
+            </div>
+        </section>
+
+        <section class="pedido-content">
+            <div class="container pedido-layout">
+
+                <!-- CONSTANZA EV3:
+                     Adaptación de classic-restaurant-reservation.html.
+                     Tarjeta reservation-card, cuerpo form-body,
+                     secciones de campos y bloque final form-bottom.
+                     Sin PHP, captcha ni validación smart-form. -->
+
+                <div class="pedido-form-panel reservation-card">
+                    <h2>Completa tu pedido</h2>
+
+                    <p class="pending-note" id="aviso-formulario">
+                        Para preparar tu consulta, necesitas tener
+                        JavaScript habilitado. También puedes contactarnos
+                        directamente por WhatsApp, Instagram o correo.
+                    </p>
+
+                    <noscript>
+                        <p>
+                            El formulario requiere JavaScript.
+                            Utiliza los enlaces de contacto de esta página.
+                        </p>
+                    </noscript>
+
+                    <form id="form-pedido"
+                          action="#"
+                          method="get"
+                          aria-describedby="aviso-formulario"
+                          novalidate>
+
+                        <div class="form-body">
+
+                            <div class="section form-field">
+                                <label for="pedido-nombre">
+                                    Nombre completo <span>*</span>
+                                </label>
+
+                                <input type="text"
+                                       id="pedido-nombre"
+                                       name="nombre"
+                                       autocomplete="name"
+                                       placeholder="Ej.: María González"
+                                       required>
+                            </div>
+
+                            <div class="row pedido-form-row">
+                                <div class="col-md-6">
+                                    <div class="section form-field">
+                                        <label for="pedido-telefono">
+                                            Teléfono <span>*</span>
+                                        </label>
+
+                                        <input type="tel"
+                                               id="pedido-telefono"
+                                               name="telefono"
+                                               autocomplete="tel"
+                                               placeholder="Ej.: 952281744"
+                                               required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="section form-field">
+                                        <label for="pedido-correo">
+                                            Correo electrónico
+                                        </label>
+
+                                        <input type="email"
+                                               id="pedido-correo"
+                                               name="correo"
+                                               autocomplete="email"
+                                               placeholder="tucorreo@email.cl">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Integración (Daniela González): pedido de varias tortas.
+                                 El contador indica cuántas tortas lleva el pedido y pedido.js
+                                 agrega una ficha por torta (Torta 1, Torta 2...) a partir de
+                                 la plantilla de abajo. Reemplaza los campos «Tipo de torta» y
+                                 «Tamaño / porciones», que permitían una sola torta por pedido. -->
+                            <div class="section form-field pedido-tortas">
+                                <label for="pedido-cantidad">
+                                    ¿Cuántas tortas quieres pedir? <span>*</span>
+                                </label>
+
+                                <div class="contador-tortas">
+                                    <button type="button"
+                                            class="contador-btn"
+                                            id="tortas-menos"
+                                            aria-label="Quitar una torta">−</button>
+
+                                    <input type="number"
+                                           id="pedido-cantidad"
+                                           name="cantidad"
+                                           min="1"
+                                           max="10"
+                                           value="1"
+                                           inputmode="numeric"
+                                           aria-describedby="ayuda-cantidad">
+
+                                    <button type="button"
+                                            class="contador-btn"
+                                            id="tortas-mas"
+                                            aria-label="Agregar una torta">+</button>
+                                </div>
+
+                                <p class="form-help" id="ayuda-cantidad">
+                                    Hasta 10 tortas por pedido. Si necesitas más, indícalo en el mensaje.
+                                </p>
+
+                                <div class="lista-tortas" id="lista-tortas" aria-live="polite"></div>
+                            </div>
+
+                            <template id="plantilla-torta">
+                                <fieldset class="torta-item">
+                                    <legend class="torta-titulo">Torta 1</legend>
+
+                                    <div class="row pedido-form-row">
+                                        <div class="col-md-6">
+                                            <div class="section form-field">
+                                                <label class="torta-label-tipo">
+                                                    Tipo de torta <span>*</span>
+                                                </label>
+
+                                                <select class="torta-tipo" required>
+                                    <option value="">Selecciona tu torta</option>
+                                    <option value="Torta Amor">Torta Amor</option>
+                                    <option value="Torta Caluga">Torta Caluga</option>
+                                    <option value="Torta Mocca Nuez">Torta Mocca Nuez</option>
+                                    <option value="Torta de Piña Clásica">Torta de Piña Clásica</option>
+                                    <option value="Torta 5 Leches">Torta 5 Leches</option>
+                                    <option value="Torta 7 Sabores">Torta 7 Sabores</option>
+                                    <option value="Torta 3 Leches Maracuyá">Torta 3 Leches Maracuyá</option>
+                                    <option value="Torta Pompadour">Torta Pompadour</option>
+                                    <option value="Torta Martuca">Torta Martuca</option>
+                                    <option value="Torta Sra. Ginger">Torta Sra. Ginger</option>
+                                    <option value="Torta Pie de Limón">Torta Pie de Limón</option>
+                                    <option value="Torta personalizada">Torta personalizada</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="section form-field">
+                                                <label class="torta-label-porciones">
+                                                    Tamaño / porciones
+                                                </label>
+
+                                                <select class="torta-porciones">
+                                                    <option value="">Selecciona una opción</option>
+                                                    <option>20 personas</option>
+                                                    <option>30 personas</option>
+                                                    <option>Otro (indicar en el detalle)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section form-field">
+                                        <label class="torta-label-detalle">
+                                            Detalle de esta torta (opcional)
+                                        </label>
+
+                                        <input type="text"
+                                               class="torta-detalle"
+                                               maxlength="200"
+                                               placeholder="Ej.: sin nueces, texto «Feliz cumpleaños Ana», decoración azul">
+                                    </div>
+                                </fieldset>
+                            </template>
+
+                            <div class="section form-field">
+                                <label for="pedido-fecha">
+                                    Fecha de retiro solicitada <span>*</span>
+                                </label>
+
+                                <input type="date"
+                                       id="pedido-fecha"
+                                       name="fecha"
+                                       required>
+                            </div>
+
+                            <div class="section form-field">
+                                <!-- Integración (Daniela González): el detalle de cada torta va en su ficha;
+                                     este campo opcional queda solo para comentarios generales del pedido. -->
+                                <label for="pedido-mensaje">
+                                    Comentarios adicionales (opcional)
+                                </label>
+
+                                <textarea id="pedido-mensaje"
+                                          class="pedido-comentarios"
+                                          name="mensaje"
+                                          placeholder="Ej.: hora aproximada de retiro, alergias o alguna consulta sobre el pedido."
+                                          rows="3"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="form-bottom">
+                            <!-- pedido.js agrega aquí el resumen
+                                 y habilita el botón al iniciarse. -->
+                            <button class="btn btn-primary btn-submit"
+                                    type="submit"
+                                    title="Requiere JavaScript para preparar la consulta"
+                                    disabled>
+                                Continuar en WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- CONSTANZA EV3: contacto del emprendimiento. -->
+                <aside class="pedido-side">
+                    <div class="pedido-contact-card">
+                        <h2>¿Prefieres escribirnos directamente?</h2>
+
+                        <a class="contact-pill contact-whatsapp"
+                           href="https://wa.me/56952281744?text=Hola%20Ginger%2C%20quiero%20hacer%20un%20pedido."
+                           rel="noopener noreferrer"
+                           target="_blank">
+                            WhatsApp
+                        </a>
+
+                        <a class="contact-pill"
+                           href="https://www.instagram.com/lacasitadeginger_/"
+                           rel="noopener noreferrer"
+                           target="_blank">
+                            ◎ Instagram
+                        </a>
+
+                        <a class="contact-pill"
+                           href="mailto:Fabiola.Avendano@gmail.com">
+                            ✉ Correo electrónico
+                        </a>
+
+                        <div class="side-deco" aria-hidden="true">♡</div>
+
+                        <div class="side-feature">
+                            <h3>Pedidos con anticipación</h3>
+                            <p>
+                                Consulta por WhatsApp, Instagram o correo
+                                la disponibilidad para la fecha
+                                en que necesitas tu pedido.
+                            </p>
+                        </div>
+
+                        <div class="side-feature">
+                            <h3>Tortas personalizadas</h3>
+                            <p>
+                                Cuéntanos qué torta te interesa,
+                                para cuántas personas y qué decoración
+                                te gustaría. Contáctanos para consultar
+                                las opciones disponibles.
+                            </p>
+                        </div>
+
+                        <div class="side-feature">
+                            <h3>Retiro en tienda</h3>
+                            <p>
+                                Encuéntranos en Yungay 95,
+                                esquina Iquique, Chillán.
+                                Contáctanos para coordinar
+                                el retiro de tu pedido.
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- CONSTANZA EV3:
+         Footer adaptado de classic-onepage-restaurant.html.
+         Daniela integrará este bloque en las demás páginas. -->
+
+    <footer class="footer site-footer footer-ginger" id="contacto">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <a class="footer-brand" href="index.html">
+                        <img class="footer-logo"
+                             src="img/optimizado/logo.webp"
+                             alt="">
+
+                        <span>
+                            La Casita<br>
+                            <strong>de Ginger</strong>
+                        </span>
+                    </a>
+
+                    <h2 class="footer-heading">Ven a visitarnos</h2>
+
+                    <address>
+                        Yungay 95, esquina Iquique<br>
+                        Chillán, Región de Ñuble, Chile.
+                    </address>
+
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Yungay%2095%2C%20Chill%C3%A1n%2C%20Chile"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Ver ubicación en Google Maps
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <h2 class="footer-heading">Horarios de atención</h2>
+
+                    <ul class="list-unstyled opening-time footer-horarios">
+                        <li>
+                            <span class="day">Lunes a sábado</span>
+                            <span class="time">09:30–20:30</span>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Consultas por WhatsApp y redes sociales:
+                        también fines de semana.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-12 footer-col">
+                    <h2 class="footer-heading">Redes y contacto</h2>
+
+                    <ul class="list-unstyled footer-contactos">
+                        <li>
+                            <a href="https://wa.me/56952281744"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                WhatsApp: +56 9 5228 1744
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/lacasitadeginger_/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Instagram: @lacasitadeginger_
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.tiktok.com/@lacasitadeginger"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                TikTok: @lacasitadeginger
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:Fabiola.Avendano@gmail.com">
+                                Fabiola.Avendano@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Integración (Daniela González): se quitó la línea del sitio académico para publicar la página. -->
+        </div>
+    </footer>
+
+    <!-- DANIELA: botón flotante de WhatsApp. -->
+    <a class="wa-float"
+       id="btn-whatsapp"
+       href="https://wa.me/56952281744?text=Hola%20Ginger%2C%20quiero%20hacer%20un%20pedido."
+       rel="noopener noreferrer"
+       target="_blank"
+       aria-label="Escríbele a Ginger por WhatsApp">
+
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="wa-icon">
+            <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"></path>
+        </svg>
+
+        <span>Escríbele a Ginger</span>
+    </a>
+
+    <!-- DANIELA: botón Volver arriba. -->
+    <a class="back-to-top"
+       id="btn-arriba"
+       href="#arriba"
+       aria-label="Volver arriba">
+        <i class="ti-angle-up"></i>
+    </a>
+
+    <!-- Recursos del template: no modificar. -->
+    <script src="js/plugins/plugins.js"></script>
+
+    <!-- JavaScript de Daniela. -->
+    <script src="js/general.js"></script>
+    <!-- JavaScript de Jorge Aravena (Ev. 3): menú en celular -->
+    <script src="js/assan-nav.js"></script>
+
+    <!-- JavaScript de Constanza. -->
+    <script src="js/pedido.js"></script>
+
+</body>
+</html>

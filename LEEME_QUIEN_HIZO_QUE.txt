@@ -1,0 +1,131 @@
+LA CASITA DE GINGER · EVALUACIÓN 3 · SITIO FINAL
+Diseño Web · IPLACEX · Grupo 1
+Daniela González · Jorge Aravena · Jorge Medina · Constanza Contreras
+
+Cómo abrirlo: abrir index.html en el navegador (no necesita servidor).
+Template usado: Assan Restaurant (Bootstrap 4), entregado por la docente.
+
+En el código, cada sección tiene un comentario con el nombre de quien la
+hizo. Los cambios hechos al unir las partes están marcados con
+«Integración (Daniela González)». Los comentarios no se ven en la página.
+
+=======================================================================
+1. DANIELA GONZÁLEZ · Base, Inicio, menú, botones flotantes e integración
+=======================================================================
+Páginas y secciones
+  - Conexión del template sin perder el diseño de la Evaluación 2.
+  - index.html: Bienvenida, Conoce a Ginger (presentación), Descubre La
+    Carta, Quiénes somos, Misión y Visión, Te esperamos en Chillán.
+  - Encabezado y menú de las 4 páginas, botón de WhatsApp y «Volver arriba».
+  - Integración final de las partes de todos.
+Archivos
+  css/template.css     conecta el template en una capa base
+  css/base.css         estilos generales, menú, botón de menú en celular
+  css/inicio.css       secciones del Inicio
+  js/general.js        «Volver arriba» (scroll y click) y página actual en el menú
+
+=======================================================================
+2. JORGE ARAVENA · La Carta y Conoce a Ginger
+=======================================================================
+Páginas y secciones
+  - carta.html: encabezado, La Carta con pestañas del template (6
+    categorías) y Preparaciones especiales. Administrador local de La Carta
+    (enlace «Administración» en el pie de La Carta).
+  - ginger.html: encabezado, libro con el cuento completo (dedicatoria,
+    14 páginas, contador y flechas), aventuras de Ginger y Su misión.
+  - Administrador local de Tortas (enlace «Administración de tortas» bajo
+    las tortas del Inicio).
+  - Menú de celular (botón de tres líneas) en las 4 páginas.
+  Usuario y contraseña de demostración de los administradores:
+    Admin01 / Ginger1234
+Archivos
+  css/carta.css                 La Carta y Preparaciones especiales
+  css/ginger.css                Conoce a Ginger
+  css/ginger-cuento-completo.css  libro con el cuento completo
+  css/assan-adaptacion.css      adaptación de clases del template
+  css/carta-admin-local.css     ventana de los administradores
+  css/tortas-admin-local.css    detalles del administrador de Tortas
+  js/carta.js                   pestañas de La Carta (click y keydown)
+  js/carta-admin-local.js       administrador de La Carta (submit, click,
+                                change; guarda en localStorage)
+  js/tortas-admin-local.js      administrador de Tortas (fotos con change)
+  js/assan-nav.js               menú en celular (click y tecla Escape)
+
+=======================================================================
+3. JORGE MEDINA · Tortas, Torta personalizada y Experiencias
+=======================================================================
+Páginas y secciones
+  - index.html: Todas nuestras tortas (con filtro), Torta personalizada,
+    Otros modelos de nuestra pastelería, Experiencias en nuestra casita
+    (reseñas reales de Google Maps).
+Archivos
+  css/tortas.css   estilos de sus secciones
+  js/tortas.js     filtro de tortas por categoría (click) con contador
+
+=======================================================================
+4. CONSTANZA CONTRERAS · Haz tu pedido y pie de página
+=======================================================================
+Páginas y secciones
+  - pedido.html: formulario de pedido con la estructura del template.
+  - Pie de página de las 4 páginas.
+Archivos
+  css/pedido.css   página Haz tu pedido
+  css/footer.css   pie de página (trasladado desde pedido.css al unir)
+  js/pedido.js     validación (blur y submit), envío por WhatsApp,
+                   torta preseleccionada desde el Inicio y resumen (change)
+
+=======================================================================
+ARCHIVOS DEL TEMPLATE (no se editan)
+=======================================================================
+  css/plugins/, css/style-restaurant.css, js/plugins/, bower_components/
+
+=======================================================================
+CAMBIOS HECHOS AL UNIR LAS PARTES (Daniela González)
+=======================================================================
+  - Pie de página de Constanza en las 4 páginas (css/footer.css).
+  - Reglas antiguas de La Carta trasladadas desde tortas.css a carta.css.
+  - Enlaces «Pedir esta torta» con la torta elegida (?torta=).
+  - Reseñas: seis tarjetas del mismo tamaño y botón a Google Maps.
+  - Mismo estilo en las secciones de color (Experiencias, Misión y
+    Visión, Su misión) y puntitos suaves en las secciones claras.
+  - Administrador de Tortas de Jorge Aravena unido a la sección de Jorge
+    Medina: conserva la categoría del filtro, la clase del template y el
+    enlace al pedido; el filtro vuelve a leer las tarjetas si cambian.
+  - Botón de menú de celular de Jorge Aravena agregado al menú común.
+  - Torta personalizada y Otros modelos en una columna en celular.
+  - Se quitó la tarjeta «Torta personalizada» de la grilla de tortas
+    (repetía la sección de abajo); las 11 tortas quedan en filas centradas.
+  - Pie de página separado con una línea dorada y sombra suave.
+  - Libro: borde de la portada corregido, «Cerrar el libro» al final con
+    contraportada (enlaces a La Carta y Tortas) y lugares en caramelo.
+  - Se quitaron la nota de precios referenciales y el texto bajo las fotos
+    de Torta personalizada y Preparaciones especiales.
+  - La Carta: pestañas del mismo tamaño, sin la imagen de Ginger en
+    Preparaciones especiales y con la tipografía y botones del sitio.
+  - Se eliminó ajustes-daniela.css, como pidió la docente: cada regla se
+    trasladó al archivo de quien corresponde (base.css, ginger.css,
+    carta.css, tortas.css y pedido.css), sin cambiar el diseño.
+
+=======================================================================
+CAMBIOS PARA EL EXAMEN FINAL (Integración, Daniela González)
+=======================================================================
+  - Haz tu pedido permite pedir varias tortas en un solo pedido:
+    contador de tortas (1 a 10) y una ficha por torta (Torta 1,
+    Torta 2...) con tipo, tamaño y detalle opcional.
+  - El detalle de cada torta va en su ficha; el mensaje general queda
+    como «Comentarios adicionales (opcional)» (hora de retiro, alergias,
+    consultas).
+  - El mensaje de WhatsApp incluye todas las tortas; se abre ya escrito
+    y la persona decide si lo envía.
+  - Precio de cada torta según su tamaño y total estimado del pedido;
+    la torta personalizada (u otro tamaño) queda «a conversar». Si el
+    administrador de Tortas cambió precios en el navegador, se usan esos.
+  - El resumen (tortas, comentarios adicionales y total) va destacado en
+    vino en la columna derecha y acompaña al formulario al bajar; en
+    celular aparece justo antes del botón.
+  Archivos: pedido.html, js/pedido.js y css/pedido.css (marcados con
+  «Integración (Daniela González)»).
+  - Botón «Continuar en WhatsApp» en verde pino con borde dorado.
+  - Para publicar la página se quitó la línea «Sitio académico, Evaluación
+    N.º 3 Diseño Web, Grupo 1» del pie de las 4 páginas, y los textos de
+    precios referenciales o por confirmar del pedido.

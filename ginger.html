@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="La Casita de Ginger: pastelería artesanal de Chillán, con magia navideña todo el año." name="description"/>
+<title>Conoce a Ginger | La Casita de Ginger</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&amp;display=swap" rel="stylesheet"/>
+<!-- HOJAS DE ESTILO: base.css (Daniela González) · ginger.css y cuento completo (Jorge Aravena) · footer.css (Constanza Contreras) -->
+<!-- ESTILOS DEL TEMPLATE (Assan, Bootstrap 4) · template.css los importa como capa base.
+     Nuestros estilos siempre ganan sobre el template, así se mantiene el diseño de La Casita de Ginger. -->
+<link href="css/template.css" rel="stylesheet"/>
+<!-- NUESTROS ESTILOS -->
+<link href="css/base.css" rel="stylesheet"/>
+<link href="css/ginger.css" rel="stylesheet"/>
+
+<!-- Pie de página común (Constanza Contreras) -->
+<link href="css/footer.css" rel="stylesheet"/>
+<!-- ESTILOS DE JORGE ARAVENA (Ev. 3): adaptación Assan y cuento completo -->
+<link href="css/assan-adaptacion.css" rel="stylesheet"/>
+<link href="css/ginger-cuento-completo.css" rel="stylesheet"/>
+</head>
+<body class="page-ginger">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<!-- ===== ENCABEZADO Y NAVEGACIÓN COMPARTIDOS · Daniela González ===== -->
+<!-- ·····································································
+     EVALUACIÓN 3 · HECHO POR: DANIELA GONZÁLEZ
+     Menú y encabezado compartidos por todas las páginas. Diseño de la Ev. 2 sin cambios.
+     Si alguien necesita cambiar el menú, avisa a Daniela para cambiarlo en las 4 páginas.
+     (Comentario del código; no se ve en la página.)
+     ····································································· -->
+<header class="site-header" id="arriba">
+<div class="container nav-wrap">
+<a aria-label="Volver al inicio de La Casita de Ginger" class="brand" href="index.html">
+<img alt="Logo oficial de La Casita de Ginger" class="brand-logo" loading="eager" src="img/optimizado/logo.webp"/>
+<span class="brand-copy"><strong>La Casita<br/>de Ginger</strong><small>PASTELERÍA ARTESANAL</small></span>
+</a>
+<!-- Integración (Daniela González): botón de menú para celular de Jorge Aravena (js/assan-nav.js).
+     El menú es el mismo; en pantallas pequeñas se abre y se cierra con este botón. -->
+<button aria-controls="navbarRestaurant" aria-expanded="false" aria-label="Mostrar menú de navegación" class="menu-toggle" data-assan-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Navegación principal" class="main-nav" id="navbarRestaurant">
+<a class="" href="index.html">Inicio</a>
+<a href="index.html#tortas">Tortas</a><a class="is-active" href="ginger.html">Ginger</a>
+<a href="carta.html">La Carta</a>
+<a href="index.html#nosotros">Nosotros</a>
+<a href="index.html#visitanos">Contacto</a>
+<a class="btn btn-small btn-primary" href="pedido.html">♧ Haz tu pedido</a>
+</nav>
+</div>
+</header>
+<main class="assan-page-main" id="contenido">
+<!-- ===================================================================
+     CONOCE A GINGER · JORGE ARAVENA (Evaluación 3)
+     Encabezado, libro con el cuento completo (dedicatoria, 14 páginas,
+     contador y flechas), aventuras y Su misión. Integrado por Daniela González:
+     en Su misión se mantuvo el estilo de las secciones de color y el mensaje de Ginger.
+     =================================================================== -->
+<!-- ===== CONOCE A GINGER · Encabezado: Jorge Aravena ===== -->
+<section class="ginger-hero assan-section">
+<div class="container ginger-hero-grid">
+<div>
+<p class="eyebrow">
+     — UNA GALLETITA LLENA DE MAGIA —
+    </p>
+<h1>
+     Conoce a
+     <em>
+      Ginger
+     </em> </h1>
+<p>
+     ¡Hola! Soy Ginger, la galletita de jengibre que da vida a esta dulce aventura.
+    </p>
+<div class="ginger-hero-actions">
+<a class="btn btn-primary" href="#historia">
+      Descubre mi historia ↓
+     </a>
+<a class="ginger-text-link" href="#aventuras">
+      Mis aventuras →
+     </a>
+</div>
+</div>
+<img alt="Ginger haciendo un pastel, imagen grande junto al título Conoce a Ginger" class="ginger-hero-mascot ginger-hero-photo" loading="eager" src="img/optimizado/ginger-haciendo-pastel.webp"/>
+</div>
+</section>
+<!-- ===== LA HISTORIA DE GINGER · Textos e ilustraciones: Jorge Aravena · Libro interactivo: Daniela González ===== -->
+<section class="ginger-story section-anchor assan-section" id="historia">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">
+     — UNA HISTORIA ILUSTRADA —
+    </p>
+<h2>
+     La historia de
+     <em>
+      Ginger
+     </em>
+</h2>
+</div>
+<!-- Integración (Daniela González): al terminar, el libro se cierra con «Cerrar el libro» (casilla hoja-14)
+     y en la contraportada aparecen los enlaces a La Carta y a las Tortas. Estilos al final de css/ginger-cuento-completo.css. -->
+<div class="flipbook"><input class="flip-check" id="hoja-0" type="checkbox"/><input class="flip-check" id="hoja-1" type="checkbox"/><input class="flip-check" id="hoja-2" type="checkbox"/><input class="flip-check" id="hoja-3" type="checkbox"/><input class="flip-check" id="hoja-4" type="checkbox"/><input class="flip-check" id="hoja-5" type="checkbox"/><input class="flip-check" id="hoja-6" type="checkbox"/><input class="flip-check" id="hoja-7" type="checkbox"/><input class="flip-check" id="hoja-8" type="checkbox"/><input class="flip-check" id="hoja-9" type="checkbox"/><input class="flip-check" id="hoja-10" type="checkbox"/><input class="flip-check" id="hoja-11" type="checkbox"/><input class="flip-check" id="hoja-12" type="checkbox"/><input class="flip-check" id="hoja-13" type="checkbox"/><input class="flip-check" id="hoja-14" type="checkbox"/><div class="flip-stage"><div class="flip-leaf leaf-0"><label class="flip-face flip-front page-cover" for="hoja-0"><img alt="Portada del cuento: La historia de Ginger, la galletita que dio vida a una Casita" src="img/optimizado/portada-historia-ginger.webp"/><span class="book-cover-btn">Abrir el libro</span></label>
+<div class="flip-face flip-back page-dedication"><div class="dedication-oval"><p>En memoria de Silvia (Q.E.P.D).<br/>1959-2024</p><p>Madre, suegra y abuelita.</p><p>Gracias por tu amor infinito, por creer en nosotros y por acompañarnos incluso ahora, cuando este sueño se volvió realidad.</p><p>Tu luz nos sigue guiando.</p></div><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-0">‹</label></div></div><div class="flip-leaf leaf-1"><div class="flip-face flip-front page-text story-full-text story-intro"><div class="story-intro-content"><img class="story-intro-ginger" src="img/optimizado/ginger-saludando-bienvenida.webp" alt="Ginger saludando con su gorro de pastelero" loading="eager"/><span class="story-number">COMIENZA LA HISTORIA</span><p class="story-paragraph">Hola, soy Ginger y esta es mi historia...</p></div><span class="story-controls"><span class="story-count">1 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-1">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Una mujer con delantal rosado sonríe en una cocina de madera." loading="lazy" src="img/optimizado/historia-1.webp"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-1">‹</label></div></div><div class="flip-leaf leaf-2"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 01</span><h3>La abuela Silvia</h3><p class="story-paragraph">Todo comenzó en la cocina de una abuelita llamada Silvia, a quien le encantaban los dulcecitos que hacía su yerno. El lugar estaba lleno de aromas dulces, canela, risas y un horno bien calentito.</p><span class="story-controls"><span class="story-count">2 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-2">›</label></span></div><div class="flip-face flip-back page-img"><img alt="La mujer ríe mientras un cocinero trabaja al fondo de la cocina." loading="lazy" src="img/optimizado/historia-2.webp"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-2">‹</label></div></div><div class="flip-leaf leaf-3"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 02</span><h3>Recetas para recordar</h3><p class="story-paragraph">Ella siempre miraba con atención las preparaciones de su yerno, probaba y sonreía. Un día con mucha curiosidad, decidió copiar sus recetas, para que nunca se perdieran.</p><span class="story-controls"><span class="story-count">3 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-3">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Ginger sobre la encimera frente a la mujer sorprendida." loading="lazy" src="img/optimizado/historia-3.webp"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-3">‹</label></div></div><div class="flip-leaf leaf-4"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 03</span><h3>Ginger cobra vida</h3><p class="story-paragraph">Así fue como, entre harina, especias y una pizca de magia invisible, nací yo: una pequeña galletita de jengibre. Fui creada con cariño y amasada con un montón de sueños que pedían salir al mundo. Y entonces, sin pensarlo demasiado, di un brinco valiente... y me marché.</p><span class="story-controls"><span class="story-count">4 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-4">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Ginger corre por una plaza con banderas chilenas, seguido por la mujer, el cocinero y una gallina." loading="lazy" src="img/optimizado/historia-4.webp"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-4">‹</label></div></div><div class="flip-leaf leaf-5"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 04</span><h3>El primer desafío</h3><p class="story-paragraph">—¡No me alcanzarán! —dije— porque cuando uno confía en sí mismo, los pasos se vuelven más firmes y el corazón más valiente. —El mundo es grande, y mis pasos también—</p><p class="story-location">Cuna de Prat, Ninhue.</p><span class="story-controls"><span class="story-count">5 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-5">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Ginger y sus compañeros corren frente a una pequeña iglesia." loading="lazy" src="img/optimizado/historia-5.webp"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-5">‹</label></div></div><div class="flip-leaf leaf-6"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 05</span><h3>Una carrera compartida</h3><p class="story-paragraph">Corrí más rápido que el yerno y la abuela, más ágil que la gallina negra, más ligero que el chancho Pancho, más firme que la vaca Lola. Ni siquiera el astuto zorro logró detenerme.</p><p class="story-location">Santuario de Schoenstatt, Chillán Viejo.</p><span class="story-controls"><span class="story-count">6 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-6">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Ginger y sus compañeros corren en una playa frente a un arco de roca." loading="lazy" src="img/optimizado/historia-6.webp"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-6">‹</label></div></div><div class="flip-leaf leaf-7"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 06</span><h3>Descubriendo Ñuble</h3><p class="story-paragraph">Mientras corría, descubrí caminos, paisajes y lugares llenos de magia en la Región de Ñuble.</p><p class="story-location">Iglesia de Piedra, Cobquecura.</p><span class="story-controls"><span class="story-count">7 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-7">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Ginger rema en una balsa; sus compañeros navegan detrás, cerca de un puente colgante." loading="lazy" src="img/optimizado/historia-7-reemplazo.png"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-7">‹</label></div></div><div class="flip-leaf leaf-8"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 07</span><h3>Siempre adelante</h3><p class="story-paragraph">—¡Nadie podrá atraparme! —repetía— Porque soy Ginger, el hombre de Jengibre.</p><p class="story-location">Puente Las Veguillas, San Fabián.</p><span class="story-controls"><span class="story-count">8 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-8">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Cuatro escenas de Ginger: longanizas, río, piano e iglesia." loading="lazy" src="img/optimizado/historia-8-reemplazo.png"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-8">‹</label></div></div><div class="flip-leaf leaf-9"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 08</span><h3>Por las comunas</h3><p class="story-paragraph">Y continué mi recorrido por las 21 comunas, de la hermosa Región de Ñuble.</p><p class="story-location">Mercado Municipal, Chillán; Valle Hermoso, Pinto; Escultura homenaje, Plaza de Armas, Chillán; Catedral de Chillán.</p><span class="story-controls"><span class="story-count">9 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-9">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Ginger visita una cascada, observa artesanía, aparece junto a comidas tradicionales y recorre una viña." loading="lazy" src="img/optimizado/historia-9.webp"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-9">‹</label></div></div><div class="flip-leaf leaf-10"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 09</span><h3>Entre tradiciones</h3><p class="story-paragraph">—¡Nadie podrá atraparme! —repetía— Porque soy Ginger, el gran hombre de Jengibre.</p><p class="story-location">Salto del Itata, Yungay; Quinchamalí, Chillán; Moteras, Av. O’Higgins, Chillán; Valle del Itata de Ñuble.</p><span class="story-controls"><span class="story-count">10 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-10">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Una galletita juega en la laguna mientras otra, un cerdito y un pájaro permanecen en la orilla." loading="lazy" src="img/optimizado/historia-10-reemplazo.png"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-10">‹</label></div></div><div class="flip-leaf leaf-11"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 10</span><h3>Aprender del camino</h3><p class="story-paragraph">Cada paso me enseñó que se puede avanzar con alegría y perseverancia.</p><p class="story-location">Laguna el Huemul, Valle Las Trancas.</p><span class="story-controls"><span class="story-count">11 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-11">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Ginger descansa en una roca junto al río, con un zorro en la otra orilla." loading="lazy" src="img/optimizado/historia-11.webp"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-11">‹</label></div></div><div class="flip-leaf leaf-12"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 11</span><h3>Detenerse para crear</h3><p class="story-paragraph">Hasta que un día me detuve, respiré profundo y entendí algo importante: “No siempre hay que correr, la verdadera magia nace cuando nos atrevemos a crear”.</p><p class="story-location">Catedrales de piedra, El Carmen.</p><span class="story-controls"><span class="story-count">12 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-12">›</label></span></div><div class="flip-face flip-back page-img"><img alt="Ginger junto a una casita de jengibre y sus compañeros: gallina, cerdito, zorro y vaca." loading="lazy" src="img/optimizado/historia-12.webp"/><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-12">‹</label></div></div><div class="flip-leaf leaf-13"><div class="flip-face flip-front page-text story-full-text "><span class="story-number">CAPÍTULO 12</span><h3>Un hogar dulce</h3><p class="story-paragraph">Así llegué a Yungay 95, donde levanté mi casita de jengibre. Una casita hecha con dedicación, valentía, confianza y con todo el amor del mundo. Aquí pongo en práctica esas recetas llenas de cariño y la magia del sabor que vive en mis manos. En mi casita preparo dulcecitos caseros, cafecitos de grano, juguitos naturales, pancitos y muchas cosas ricas para grandes y pequeños.</p><span class="story-controls"><span class="story-count">13 / 14</span><label aria-label="Siguiente página" class="story-arrow story-next" for="hoja-13">›</label></span></div><div class="flip-face flip-back page-text story-reverse"><span class="story-number">PÁGINA 14 · REFLEXIÓN FINAL</span><p class="story-paragraph">Para finalizar quiero que sepas algo: Todos llevamos magia dentro, y cuando confiamos, insistimos y hacemos las cosas con amor, podemos crear lugares donde el corazón sonríe y se siente en casa.</p><label aria-label="Página anterior" class="story-arrow story-prev" for="hoja-13">‹</label></div></div><div class="flip-leaf leaf-14"><div class="flip-face flip-front page-end"><p class="fin">Fin</p><p>¡Gracias por acompañar a Ginger en su historia!</p><label class="story-close" for="hoja-14">Cerrar el libro ›</label></div><div class="flip-face flip-back page-backcover"><img alt="" class="backcover-logo" loading="lazy" src="img/optimizado/logo.webp"/><p class="backcover-title">La Casita<br/>de Ginger</p><p class="backcover-text">Ven a conocer la casita de Ginger y sus dulces.</p><div class="story-end-actions"><a class="story-end-link" href="carta.html">Ir a La Carta</a><a class="story-end-link" href="index.html#tortas">Ir a las Tortas</a></div><label class="story-reopen" for="hoja-14">‹ Volver a abrir</label></div></div></div><p class="flip-hint">Presiona la flecha o la esquina de la página para pasar la hoja.</p></div>
+</div>
+</section>
+<!-- ===== LAS AVENTURAS DE GINGER · Galería: Jorge Aravena · Tarjetas que giran: Daniela González ===== -->
+<section class="adventures-section section-anchor assan-section" id="aventuras">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">
+     — UN PERSONAJE, MUCHAS AVENTURAS —
+    </p>
+<h2>
+     Las aventuras de
+     <em>
+      Ginger
+     </em>
+</h2>
+<p>
+     Bombero, astronauta, jardinero, doctor y muchas facetas más de nuestro personaje estrella.
+    </p>
+</div>
+<div class="adventures-grid">
+<figure class="adventure-card">
+<img alt="Ginger bombero" class="" loading="lazy" src="img/optimizado/ginger-bombero.webp"/>
+<figcaption>
+      Ginger bombero
+     </figcaption>
+<input class="adv-check" id="aventura-1" type="checkbox"/><label class="adv-tab" for="aventura-1">Ver aventura</label><div class="adv-panel"><p>Una Nochebuena el horno se recalentó y Ginger llegó con su manguera a tiempo: salvó la última bandeja de galletas.</p><label class="adv-close" for="aventura-1">Volver</label></div>
+</figure>
+<figure class="adventure-card">
+<img alt="Ginger astronauta" class="" loading="lazy" src="img/optimizado/ginger-astronauta.webp"/>
+<figcaption>
+      Ginger astronauta
+     </figcaption>
+<input class="adv-check" id="aventura-2" type="checkbox"/><label class="adv-tab" for="aventura-2">Ver aventura</label><div class="adv-panel"><p>Viajó a la Luna para comprobar si era de queso y volvió con polvo de estrellas para decorar las tortas.</p><label class="adv-close" for="aventura-2">Volver</label></div>
+</figure>
+<figure class="adventure-card">
+<img alt="Ginger jardinero" class="" loading="lazy" src="img/optimizado/ginger-jardinero.webp"/>
+<figcaption>
+      Ginger jardinero
+     </figcaption>
+<input class="adv-check" id="aventura-3" type="checkbox"/><label class="adv-tab" for="aventura-3">Ver aventura</label><div class="adv-panel"><p>Plantó un huerto de menta y frutillas para que nunca falten en las recetas de La Casita.</p><label class="adv-close" for="aventura-3">Volver</label></div>
+</figure>
+<figure class="adventure-card">
+<img alt="Ginger doctor" class="" loading="lazy" src="img/optimizado/ginger-doctor.webp"/>
+<figcaption>
+      Ginger doctor
+     </figcaption>
+<input class="adv-check" id="aventura-4" type="checkbox"/><label class="adv-tab" for="aventura-4">Ver aventura</label><div class="adv-panel"><p>Atiende a las galletas quebradas con un poquito de glasé, una venda de mazapán y mucho cariño.</p><label class="adv-close" for="aventura-4">Volver</label></div>
+</figure>
+<figure class="adventure-card">
+<img alt="Ginger excursionista" class="" loading="lazy" src="img/optimizado/ginger-excursionista.webp"/>
+<figcaption>
+      Ginger excursionista
+     </figcaption>
+<input class="adv-check" id="aventura-5" type="checkbox"/><label class="adv-tab" for="aventura-5">Ver aventura</label><div class="adv-panel"><p>Recorrió los cerros de Ñuble con su mochila hasta encontrar la cascada más dulce de la región.</p><label class="adv-close" for="aventura-5">Volver</label></div>
+</figure>
+<figure class="adventure-card">
+<img alt="Ginger granjero" class="" loading="lazy" src="img/optimizado/ginger-granjero.webp"/>
+<figcaption>
+      Ginger granjero
+     </figcaption>
+<input class="adv-check" id="aventura-6" type="checkbox"/><label class="adv-tab" for="aventura-6">Ver aventura</label><div class="adv-panel"><p>Madruga junto a las gallinas para conseguir los huevos más frescos de cada receta.</p><label class="adv-close" for="aventura-6">Volver</label></div>
+</figure>
+<figure class="adventure-card">
+<img alt="Ginger en equilibrio" class="" loading="lazy" src="img/optimizado/ginger-yoga.webp"/>
+<figcaption>
+      Ginger en equilibrio
+     </figcaption>
+<input class="adv-check" id="aventura-7" type="checkbox"/><label class="adv-tab" for="aventura-7">Ver aventura</label><div class="adv-panel"><p>Cuando la cocina se llena de pedidos, respira hondo y encuentra la calma entre tanta azúcar.</p><label class="adv-close" for="aventura-7">Volver</label></div>
+</figure>
+</div>
+</div>
+</section>
+<!-- ===== SU MISIÓN · Jorge Aravena ===== -->
+<section class="ginger-mission assan-section">
+<div class="container mission-grid">
+<figure class="mission-postit"><img alt="Ginger y un amigo forman un corazón con sus manos" class="mission-corazon" loading="lazy" src="img/optimizado/ginger-corazon-amigos.webp"/><figcaption>¡Ginger te espera en su casita!</figcaption></figure>
+<!-- Integración (Daniela González): se agregó la etiqueta superior, la palabra "misión" destacada,
+     un mensaje de Ginger y adornos de fondo. El texto y los botones son los mismos.
+     Los estilos están al final de css/ginger.css. -->
+<div class="mission-copy">
+   <p class="mission-eyebrow">— LO QUE LA INSPIRA —</p>
+   <h2>
+    Su <em>misión</em>   </h2>
+   <p>
+    Su historia invita a confiar, perseverar y crear con cariño espacios donde todos se sientan acogidos.
+   </p>
+   <blockquote class="mission-message">
+    <p>«Cada galleta que horneo lleva un pedacito de mi corazón. Ven a mi casita: aquí siempre hay un lugar calentito para ti.»</p>
+    <footer><img src="img/optimizado/logo.webp" alt="" loading="lazy"/><span>Con cariño, <strong>Ginger</strong></span></footer>
+   </blockquote>
+<div class="mission-actions"><a class="btn btn-light" href="index.html#tortas">Conoce sus tortas</a><a class="btn btn-outline-light" href="carta.html">Conoce su carta</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- ===== PIE DE PÁGINA · Constanza Contreras (integrado en todas las páginas por Daniela González) ===== -->
+<!-- CONSTANZA EV3:
+         Footer adaptado de classic-onepage-restaurant.html.
+         Daniela integrará este bloque en las demás páginas. -->
+
+    <footer class="footer site-footer footer-ginger" id="contacto">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <a class="footer-brand" href="index.html">
+                        <img class="footer-logo"
+                             src="img/optimizado/logo.webp"
+                             alt="">
+
+                        <span>
+                            La Casita<br>
+                            <strong>de Ginger</strong>
+                        </span>
+                    </a>
+
+                    <h2 class="footer-heading">Ven a visitarnos</h2>
+
+                    <address>
+                        Yungay 95, esquina Iquique<br>
+                        Chillán, Región de Ñuble, Chile.
+                    </address>
+
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Yungay%2095%2C%20Chill%C3%A1n%2C%20Chile"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Ver ubicación en Google Maps
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <h2 class="footer-heading">Horarios de atención</h2>
+
+                    <ul class="list-unstyled opening-time footer-horarios">
+                        <li>
+                            <span class="day">Lunes a sábado</span>
+                            <span class="time">09:30–20:30</span>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Consultas por WhatsApp y redes sociales:
+                        también fines de semana.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-12 footer-col">
+                    <h2 class="footer-heading">Redes y contacto</h2>
+
+                    <ul class="list-unstyled footer-contactos">
+                        <li>
+                            <a href="https://wa.me/56952281744"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                WhatsApp: +56 9 5228 1744
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/lacasitadeginger_/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Instagram: @lacasitadeginger_
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.tiktok.com/@lacasitadeginger"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                TikTok: @lacasitadeginger
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:Fabiola.Avendano@gmail.com">
+                                Fabiola.Avendano@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Integración (Daniela González): se quitó la línea del sitio académico para publicar la página. -->
+        </div>
+    </footer>
+
+<!-- ===== BOTÓN FLOTANTE DE WHATSAPP · Daniela González ===== -->
+<!-- ·····································································
+     EVALUACIÓN 3 · HECHO POR: DANIELA GONZÁLEZ
+     Botón de WhatsApp (siempre visible, como en la Ev. 2) y botón 'Volver arriba' (clase back-to-top del template).
+     js/general.js muestra 'Volver arriba' al bajar 400px (evento scroll) y sube suave al hacer click (evento click).
+     (Comentario del código; no se ve en la página.)
+     ····································································· -->
+<a class="wa-float" id="btn-whatsapp" href="https://wa.me/56952281744?text=Hola%20Ginger%2C%20quiero%20hacer%20un%20pedido." rel="noopener noreferrer" target="_blank" aria-label="Escríbele a Ginger por WhatsApp"><svg aria-hidden="true" viewBox="0 0 24 24" class="wa-icon"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Escríbele a Ginger</span></a>
+<a aria-label="Volver arriba" class="back-to-top" href="#arriba" id="btn-arriba"><i class="ti-angle-up"></i></a>
+
+<!-- JavaScript del template: jQuery y Bootstrap. No se edita. -->
+<script src="js/plugins/plugins.js"></script>
+<!-- JavaScript general · Daniela González: botones flotantes y volver arriba -->
+<script src="js/general.js"></script>
+<!-- JavaScript de Jorge Aravena (Ev. 3): menú en celular -->
+<script src="js/assan-nav.js"></script>
+</body>
+</html>
