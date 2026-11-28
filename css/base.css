@@ -110,6 +110,26 @@ main>section:not(.testimonials-section):not(.ginger-mission)::after,.site-footer
 .back-to-top:hover,.back-to-top:focus{background:var(--vino-dark);color:#fff}
 @media(max-width:760px){.back-to-top{right:20px;bottom:80px;width:44px;height:44px}.back-to-top i{line-height:44px;font-size:22px}}
 
+
+/* DANIELA: Corrección del icono Volver arriba */
+
+.back-to-top i {
+    display: none;
+}
+
+.back-to-top::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: translate(-50%, -25%) rotate(45deg);
+}
+
 /* =====================================================================
    EVALUACIÓN 3 · Reglas trasladadas desde ajustes-daniela.css
    (Integración, Daniela González). Corresponden a: Daniela González (botones generales).
