@@ -6,7 +6,8 @@ El sitio presenta la identidad de la marca, sus tortas, su carta, la historia de
 
 **Sitio publicado:** [La Casita de Ginger](https://lacasitadeginger.netlify.app/)
 
-![Página de inicio](capturas/inicio.png)
+![Página de inicio] <img width="1535" height="862" alt="inicio" src="https://github.com/user-attachments/assets/5778ab50-bec9-4b27-98bd-986fee188fe6" />
+
 
 ---
 
@@ -45,9 +46,11 @@ Se mantuvo la identidad definida con la emprendedora y se adaptó a la estructur
 | La Carta | `carta.html` | Carta por categorías en pestañas y preparaciones especiales |
 | Haz tu pedido | `pedido.html` | Formulario para pedir una o varias tortas y enviarlas por WhatsApp |
 
-![La Carta](capturas/carta.png)
+![La Carta]<img width="1535" height="862" alt="carta" src="https://github.com/user-attachments/assets/7483098d-190c-40f1-a6f7-a99fc5f4caf2" />
 
-![Haz tu pedido](capturas/pedido.png)
+
+![Haz tu pedido]<img width="1535" height="862" alt="pedido" src="https://github.com/user-attachments/assets/d7a222d4-f168-426e-9460-34585ef11755" />
+
 
 ## Funcionalidades JavaScript y eventos
 
@@ -67,7 +70,7 @@ Se mantuvo la identidad definida con la emprendedora y se adaptó a la estructur
 
 El sitio se adapta a computador, tablet y celular. En pantallas pequeñas el menú se abre con un botón.
 
-![Vista en celular](capturas/celular.png)
+![Vista en celular]<img width="977" height="862" alt="celular" src="https://github.com/user-attachments/assets/2cfd59db-2d0b-4b70-a466-29493787f67c" />
 
 ## Estructura del proyecto
 
